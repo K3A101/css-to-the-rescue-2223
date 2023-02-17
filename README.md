@@ -45,6 +45,10 @@ CSS technieken zoals:
 Stapje van de versie 
 Idee  vakjes met verschillende vuurwerken, dus met animatie en de vakken swipen met scroll-snap. En andere css technieken proberen
 
+## Planning
+- CSS technieken onderzoeken en toepassen
+- De layout van de pagina klaar hebben 
+- Themassesie onderwerpen toepassen
 
 ---
 # Week 2
@@ -74,7 +78,15 @@ Bij de tweede section heb ik de vierkant op een 3D ruimte gedraaid. Ik heb de pr
 
 Verder heb ik een beetje gespeeld met 3D Animatie. Ik heb verschillende properties geprobeerd, zoals  `perspective`, `transform-style: preserver-3d` en `transform-origin`. 
 
-Ik wil het een beetje interactief maken dat en ik heb de has selector gebruikt.
+Ik wil het een beetje interactief maken dat en ik heb de :has() selector gebruikt.
 
 
 # Voortgang 2
+ALs feedback heb ik gekregen dat ik meer context kan toevoegen, zodat iemand anders kan weten wat voor van vuurwerk het is. 
+
+## Planning
+- De layout interactiever te maken, door de vakjes te flippen en zie je aan de achterkant een korte beschrijving
+- Motion path animaties toevoegen
+- CSS Gradients toevoege
+- Korte beschrijving onderaan met vuurwerkshow uitleg
+- Ander lettertype zoeken. 
