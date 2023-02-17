@@ -314,7 +314,7 @@ body:has(#pink:checked) figure>figure {
 }
 
 body:has(#blue:checked):has(#pink:checked) figure>figure {
-    background-color: aqua;
+    background-color: orange;
 }
 
 @keyframes draaien {
@@ -495,7 +495,7 @@ border-radius: 50%;
     lime 80% 90%,
     dodgerblue 90% 100%); */
 
-    background-image: radial-gradient(crimson, yellow , lime , dodgerblue , purple, crimson,
+    background-image: radial-gradient( crimson, yellow , lime , dodgerblue , purple, crimson,
                 yellow,
                 lime,
                 dodgerblue);
@@ -507,6 +507,7 @@ animation: rainbow 1s infinite linear;
 @keyframes rainbow {
     50% {
         background-image: dodgerblue, crimson, yellow, lime, dodgerblue, purple, crimson, yellow, lime;
+        
     }
 
     100% {
