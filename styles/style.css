@@ -499,4 +499,17 @@ border-radius: 50%;
                 yellow,
                 lime,
                 dodgerblue);
+animation: rainbow 1s infinite linear;
+
+    background-size: 200% 200%;
+}
+
+@keyframes rainbow {
+    50% {
+        background-image: dodgerblue, crimson, yellow, lime, dodgerblue, purple, crimson, yellow, lime;
+    }
+
+    100% {
+        background-image: lime, dodgerblue, purple, crimson, yellow, lime, dodgerblue, purple, crimson, yellow;
+    }
 }
