@@ -5,10 +5,11 @@
 }
 
 :root {
-    --beige: hsl(34, 52%, 82%);
-    --dark-blue: #171230;
+
+    --dark-blue: #0D0847;
     --white: white;
     --black: rgb(32, 32, 33);
+    --algemene-font: 'inter', sans-serif;
 }
 
 body {
@@ -18,7 +19,7 @@ body {
     align-items: center;
     width: 100%;
     /* background-color: var(--dark-blue); */
-
+    font-family: var(--algemene-font);
 }
 
 /* Container */
@@ -101,7 +102,15 @@ section:nth-of-type(1) figure {
         3em -1em 0 salmon,
         4em -1em 0 lawngreen,
         5em -1em 0 white,
-        6em -1em 0 coral;
+        6em -1em 0 coral,
+
+        0 -2em 0 indianred,
+        1em -2em 0 deeppink,
+        2em -2em 0 deepskyblue,
+        3em -2em 0 orange,
+        4em -2em 0 lawngreen,
+        5em -2em 0 lavender,
+        6em -2em 0 coral;
 
     animation-name: pixels;
     animation-duration: 3s;
@@ -136,7 +145,7 @@ section:nth-of-type(1) figure {
 
 
 @keyframes pixels {
-    0% {
+    25% {
         box-shadow:
             0 0 0 hotpink,
             1em 0 0 white,
@@ -160,12 +169,20 @@ section:nth-of-type(1) figure {
             3em -1em 0 lime,
             4em -1em 0 pink,
             5em -1em 0 burlywood,
-            6em -1em 0 slateblue;
+            6em -1em 0 slateblue,
+
+            0 -2em 0 magenta,
+            1em -2em 0 whitesmoke,
+            2em -2em 0 rebeccapurple,
+            3em -2em 0 lemonchiffon,
+            4em -2em 0 mediumblue,
+            5em -2em 0 paleturquoise,
+            6em -2em 0 teal;
 
 
     }
 
-    20% {
+    50% {
         box-shadow:
             0 0 0 lightgreen,
             1em 0 0 yellow,
@@ -189,10 +206,20 @@ section:nth-of-type(1) figure {
             3em -1em 0 gold,
             4em -1em 0 royalblue,
             5em -1em 0 burlywood,
-            6em -1em 0 yellow;
+            6em -1em 0 yellow,
+
+            0 -2em 0 aqua,
+            1em -2em 0 darkblue,
+            2em -2em 0 brown,
+            3em -2em 0 mediumslateblue,
+            4em -2em 0 yellowgreen,
+            5em -2em 0 plum,
+            6em -2em 0 indigo;
+
+
     }
 
-    30% {
+    75% {
         box-shadow:
             0 0 0 blue,
             1em 0 0 yellow,
@@ -216,10 +243,18 @@ section:nth-of-type(1) figure {
             3em -1em 0 cornflowerblue,
             4em -1em 0 pink,
             5em -1em 0 tomato,
-            6em -1em 0 slateblue;
+            6em -1em 0 slateblue,
+
+            0 -2em 0 red,
+            1em -2em 0 yellow,
+            2em -2em 0 deepskyblue,
+            3em -2em 0 moccasin,
+            4em -2em 0 mediumorchid,
+            5em -2em 0 lightgreen,
+            6em -2em 0 salmon;
     }
 
-    40% {
+    100% {
         box-shadow:
             0 0 0 ivory,
             1em 0 0 yellow,
@@ -243,8 +278,25 @@ section:nth-of-type(1) figure {
             3em -1em 0 seagreen,
             4em -1em 0 dodgerblue,
             5em -1em 0 orange,
-            6em -1em 0 plum;
+            6em -1em 0 plum,
+
+            0 -2em 0 indianred,
+            1em -2em 0 deeppink,
+            2em -2em 0 deepskyblue,
+            3em -2em 0 orange,
+            4em -2em 0 lawngreen,
+            5em -2em 0 lavender,
+            6em -2em 0 coral;
     }
+}
+
+section:nth-of-type(1) article {
+    position: absolute;
+    bottom: 1em;
+    right: 1em;
+    border-radius: 1em;
+    background-color: rgba(255, 255, 255, 0.53);
+    padding: 2em;
 }
 
 /****************************/
@@ -314,7 +366,7 @@ body:has(#pink:checked) figure>figure {
 }
 
 body:has(#blue:checked):has(#pink:checked) figure>figure {
-    background-color: orange;
+    background-color: rgb(111, 255, 0);
 }
 
 @keyframes draaien {
@@ -342,9 +394,10 @@ body:has(#blue:checked):has(#pink:checked) figure>figure {
 /* SECTION 3 */
 /*************/
 
-/* section:nth-of-type(3){
-  
-} */
+section:nth-of-type(3) {
+    position: relative;
+    background: conic-gradient(from 0deg at 50% 50%, dodgerblue, var(--dark-blue), magenta);
+}
 
 section>div {
     animation-name: omhoog;
@@ -352,7 +405,7 @@ section>div {
 }
 
 
-section:nth-of-type(3) article {
+section:nth-of-type(-n + 3) article {
     perspective: 10em;
     transform-style: preserve-3d;
     animation-name: bewegen;
@@ -407,6 +460,15 @@ section:nth-of-type(3) article:nth-of-type(3) figure {
     transform-origin: 0 50%;
 }
 
+section:nth-of-type(3) article:last-of-type {
+    position: absolute;
+    bottom: 1em;
+    right: 1em;
+    border-radius: 1em;
+    background-color: rgba(255, 255, 255, 0.53);
+    padding: 2em
+}
+
 
 @keyframes rotate-right {
     0% {
@@ -445,10 +507,11 @@ section:nth-of-type(3) article:nth-of-type(3) figure {
 /*************/
 /* Gradients */
 section:nth-of-type(4) {
-    background-image: linear-gradient(  purple, deeppink, orange );
+    background-image: linear-gradient(purple, deeppink, orange);
     background-position: left top;
-    animation: draaiende-gradient 2s linear infinite ;
+    animation: draaiende-gradient 2s linear infinite;
     background-size: 500% 500%;
+    
 }
 
 
@@ -486,31 +549,49 @@ section:nth-of-type(4) {
 
 
 section:nth-of-type(4) figure {
-width: 5em;
-height: 5em;
-aspect-ratio: 1;
-border-radius: 50%;
-/* background-image: radial-gradient(crimson 0% 10%, yellow 10% 20%,  lime 20% 30%, dodgerblue 30% 40%, purple 40% 50%,crimson 60% 70%,
+    width: 5em;
+    height: 5em;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    /* background-image: radial-gradient(crimson 0% 10%, yellow 10% 20%,  lime 20% 30%, dodgerblue 30% 40%, purple 40% 50%,crimson 60% 70%,
     yellow 70% 80%,
     lime 80% 90%,
     dodgerblue 90% 100%); */
 
-    background-image: radial-gradient( crimson, yellow , lime , dodgerblue , purple, crimson,
-                yellow,
-                lime,
-                dodgerblue);
-animation: rainbow 1s infinite linear;
+    background: radial-gradient(crimson, yellow, lime, dodgerblue, purple, crimson,
+            yellow,
+            lime,
+            dodgerblue);
+    animation: rainbow 3s infinite linear;
 
     background-size: 200% 200%;
+    /* background-position: 0%; */
 }
+
+/* @keyframes rainbow {
+    0% {
+        background-position: 0% 0%;
+
+    }
+
+ 50% {
+    background-position: 0%  0%;
+    background: dodgerblue, crimson, yellow, lime, dodgerblue, purple, crimson, yellow, lime;
+ }
+    100% {
+        background-position: 0% 0;
+          background: lime, dodgerblue, purple, crimson, yellow, lime, dodgerblue, purple, crimson, yellow;
+    }
+} */
+
 
 @keyframes rainbow {
     50% {
-        background-image: dodgerblue, crimson, yellow, lime, dodgerblue, purple, crimson, yellow, lime;
-        
+        background: dodgerblue, crimson, yellow, lime, dodgerblue, purple, crimson, yellow, lime;
+
     }
 
     100% {
-        background-image: lime, dodgerblue, purple, crimson, yellow, lime, dodgerblue, purple, crimson, yellow;
+        background: lime, dodgerblue, purple, crimson, yellow, lime, dodgerblue, purple, crimson, yellow;
     }
 }
