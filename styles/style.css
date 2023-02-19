@@ -558,33 +558,44 @@ section:nth-of-type(4) figure {
     lime 80% 90%,
     dodgerblue 90% 100%); */
 
-    background: radial-gradient(crimson, yellow, lime, dodgerblue, purple, crimson,
+    background: radial-gradient(circle at top left ,crimson, yellow, lime, dodgerblue, purple, crimson,
             yellow,
             lime,
             dodgerblue);
-    animation: rainbow 3s infinite linear;
+    animation: rainbow 3s infinite linear alternate;
 
-    background-size: 200% 200%;
+    /* background-size: 200% 200%; */
     /* background-position: 0%; */
 }
 
+@keyframes rainbow {
+    0%{
+        background: radial-gradient(circle at top left, crimson, yellow, lime, dodgerblue, purple, crimson,
+                    yellow,
+                    lime,
+                    dodgerblue);
+    }
+
+    100%{
+        background: radial-gradient(circle at bottom right, crimson, yellow, lime, dodgerblue, purple, crimson,
+                    yellow,
+                    lime,
+                    dodgerblue);
+    }
+}
+
+/* Met de background-radient zoomt de background van 100% naar 100% */
+
 /* @keyframes rainbow {
-    0% {
-        background-position: 0% 0%;
+0% {
+    background-size: 100%;
+}
 
-    }
-
- 50% {
-    background-position: 0%  0%;
-    background: dodgerblue, crimson, yellow, lime, dodgerblue, purple, crimson, yellow, lime;
- }
-    100% {
-        background-position: 0% 0;
-          background: lime, dodgerblue, purple, crimson, yellow, lime, dodgerblue, purple, crimson, yellow;
-    }
+100% {
+    background-size: 400%;
+}
 } */
-
-
+/* 
 @keyframes rainbow {
     50% {
         background: dodgerblue, crimson, yellow, lime, dodgerblue, purple, crimson, yellow, lime;
@@ -594,4 +605,4 @@ section:nth-of-type(4) figure {
     100% {
         background: lime, dodgerblue, purple, crimson, yellow, lime, dodgerblue, purple, crimson, yellow;
     }
-}
+} */
