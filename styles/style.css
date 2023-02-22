@@ -452,7 +452,13 @@ body:has(#blue:checked):has(#pink:checked) figure>figure {
 
 section:nth-of-type(3) {
     position: relative;
-    background: conic-gradient(from 0deg at 50% 50%, dodgerblue, var(--dark-blue), magenta);
+    background: repeating-conic-gradient(
+        from 45deg at 42% 65%,
+           var(--dark-blue) 0deg 10deg,
+           slateblue 10deg 20deg,
+           var(--dark-blue) 20deg 30deg  
+
+           );
 }
 
 section>div {
@@ -575,11 +581,33 @@ section:nth-of-type(3) article:nth-of-type(4) article:hover {
 /*************/
 /* Gradients */
 section:nth-of-type(4) {
-    background:
-        linear-gradient(purple, deeppink, orange);
+    background-color: var(--dark-blue);
+    background-image:
+        linear-gradient(45deg,
+            darkblue 0 25%,
+            transparent 25% 50%,
+            darkblue 50% 75%,
+            transparent 75% 100%),
+
+        linear-gradient(
+            -45deg,
+            darkblue 0 25%,
+            transparent 25% 50%,
+            darkblue 50% 75%,
+            transparent 75% 100%),
+
+        linear-gradient(darkblue,
+            purple,
+            deeppink,
+            orange,
+            yellow);
+
     background-position: left top;
-    animation: draaiende-gradient 2s linear infinite, shining 1s linear infinite;
-    background-size: 500% 500%;
+    animation: draaiende-gradient 4s linear infinite alternate;
+    background-size:
+        2em 2em,
+        2em 2em,
+        200% 200%;
 
 }
 
@@ -628,8 +656,7 @@ section:nth-of-type(4) figure figure {
     aspect-ratio: 1;
     border-radius: 50%;
     background:
-        radial-gradient(
-            circle at top left,
+        radial-gradient(circle at top left,
             crimson,
             yellow,
             lime,
@@ -664,7 +691,7 @@ section:nth-of-type(4) figure figure {
         transform: scale(5);
     }
 
- 
+
     100% {
         background-size: 400%;
     }
