@@ -627,7 +627,15 @@ section:nth-of-type(4) figure figure {
     height: 5em;
     aspect-ratio: 1;
     border-radius: 50%;
-    background: radial-gradient(circle at top left, crimson, yellow, lime, dodgerblue, purple, crimson,
+    background:
+        radial-gradient(
+            circle at top left,
+            crimson,
+            yellow,
+            lime,
+            dodgerblue,
+            purple,
+            crimson,
             yellow,
             lime,
             dodgerblue);
@@ -656,7 +664,27 @@ section:nth-of-type(4) figure figure {
         transform: scale(5);
     }
 
+ 
     100% {
         background-size: 400%;
     }
+}
+
+/***************/
+/* SECTION - 5 */
+/***************/
+.cls-1 {
+    stroke-dasharray: 0 0 20.16 20.16;
+}
+
+.cls-1,
+.cls-2 {
+    fill: none;
+    stroke: #e6e6e6;
+    stroke-miterlimit: 10;
+    stroke-width: 6px;
+}
+
+.cls-3 {
+    fill: #f7931e;
 }
