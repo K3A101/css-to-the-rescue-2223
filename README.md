@@ -90,3 +90,96 @@ ALs feedback heb ik gekregen dat ik meer context kan toevoegen, zodat iemand and
 - CSS Gradients toevoege
 - Korte beschrijving onderaan met vuurwerkshow uitleg
 - Ander lettertype zoeken. 
+
+---
+# Week 3
+
+## Wat heb ik geleerd.
+
+Gedaan:
+- motion-path
+- gradients
+- interactie tovoegen
+
+
+## Gradients
+In de volgende vakjes van mijn vuurwerk showcase ging ik meer experimenteren met gradients. Ook heb ik de gradients geanimeerd en verschillende nieuwe dingen geleerd. Eerst heb ik een onderzoek gedaan over gradients in css om de samenstelling  van de properties beter te begrijpen en daarna in de schowcase te implementeren. Verder heb ik ook de workshop over gradients deelgenomen om meer gericht kennis krijgen. 
+
+Hieronder zijn verschillende experimenten die ik heb geprobeerd:
+
+
+
+ 
+
+## 6 gradients
+- `Linear-gradient()`
+- `radial-gradient()`
+- `conic-gradient()`
+- `repeating-linear-gradient()`
+- `repeating-radial-gradient()`
+- `repeating-conic-gradient()`
+
+Om de gradients te animeren kan ik de position en de size animeren. 
+
+<img src="./images/gradient-v1.png">
+<img src="./images/gradients-v2.png">
+<img src="./images/gradient-v3.png">
+<img src="./images/gradient-v5.png">
+
+
+
+---
+
+# Motion-path
+De volgende trucje voor mijn slideshow was dat ik iets met motion path zou doen. Dit was een uitdaging meaar is wel uiteindelijk gelukt.  Ik heb eerst in illustrator de lijn getekend, en daarna in de code geplaats in een svg eleemnt. Wat ik wilde doen was de ster de path van de lijn volgen. m dat te bereiken heb ik de property `offset-path: path()` gebruikt bij de ster. Om de ster te maken heb ik de de `clip-path: polygoon()` property gebruikt. D path van de lijne heb ik in de offset-path gezet en de ster laten animeren met offset-distance. Van 0% tot 100%. Dus de ster beweegt van 
+```html
+
+   <figure class="stars"> </figure>
+<svg id="Layer_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 325.85 202.29">
+      <path class="cls-1"  d="m59.22,186.26c56.79,7.03,178.43,13.28,213.4-55.31,46.12-90.47-45.28-117.08-45.28-117.08,0,0-94.27-28.97-140.4,7.69-46.12,36.66-41.83,84.43-17.74,111.76,39.62,44.94,224.65,36.26,249.46-31.34,9.05-24.66,1.72-45.73-6.19-59.22"> </path>         </svg>
+               
+
+```
+
+
+
+
+```css
+/* Hier volg de ster  de path van de lijn  */
+
+section:nth-of-type(5) div figure {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    width: 10em;
+    height: 10em;
+    background-color: #c8ff00;
+
+  /* De path van de lijn  */
+    offset-path: path("m59.22,186.26c56.79,7.03,178.43,13.28,213.4-55.31,46.12-90.47-45.28-117.08-45.28-117.08,0,0-94.27-28.97-140.4,7.69-46.12,36.66-41.83,84.43-17.74,111.76,39.62,44.94,224.65,36.26,249.46-31.34,9.05-24.66,1.72-45.73-6.19-59.22");
+    /* offset-rotate: auto; */
+    animation: follow-path 4s linear alternate infinite;
+}
+
+
+
+@keyframes follow-path {
+    0% {
+        offset-distance: 0%;
+    }
+
+    100% {
+
+        offset-distance: 100%;
+    }
+}
+
+```
+<img src="./images/gradient-v5.png">
+
+
+--- 
+# Meer interactie
+VAls laatste heb ik meer interactie toegevoegd in mijn slideshow. Ik heb het zo gedaan dat je met de check box de animatie laten spelen en pauseren. Dit waren allemaal mogelijk met de has selector. 

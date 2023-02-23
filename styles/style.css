@@ -47,8 +47,39 @@ header {
 }
 
 header h1 {
+    background-image: 
+    repeating-linear-gradient(
+        45deg,
+        crimson, 
+        deepskyblue,
+        magenta
+    );
+
+    /* De background ga naaŕde text */
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    
+ color: black;
     font-size: 3vw;
     padding: .5em;
+   
+
+
+    animation: gradient-tekst 1s infinite;
+
+
+}
+
+
+@keyframes gradient-text{
+ 0% {
+    background-position: top left;
+ }
+
+ 100%{
+        background-position: bottom right;
+ }
 }
 
 /* Items */
@@ -379,6 +410,7 @@ body:has(#play-animation-1:checked) section:nth-of-type(1) figure {
 /****************************/
 /* SECTION 2 - 3D ANIMATION */
 /****************************/
+/* de scene  heeft een 3d omgeving*/
 section:nth-of-type(2) {
     perspective: 1000px;
     /* Hier zet je hoe ver een element kan gaan */
@@ -706,6 +738,7 @@ section:nth-of-type(4) figure figure {
     aspect-ratio: 1;
     border-radius: 50%;
     background:
+    /* Gradient voor de bal */
         radial-gradient(circle at top left,
             crimson,
             yellow,
@@ -755,11 +788,13 @@ section:nth-of-type(5) {
     position: relative;
     background-color: var(--dark-blue);
     background-image:
-        linear-gradient(transparent 0 92%,
+        linear-gradient(
+            /* De grond */
+            transparent 0 92%,
             black 90%),
-
+        /* maan */
         radial-gradient(
-            /* maan */
+            
             circle at 80% 80%,
             white 10%,
             transparent 10% 0),
@@ -783,7 +818,7 @@ section:nth-of-type(5) svg {
     width: 100%;
 
 }
-
+/* Stijling voor de lijn */
 section:nth-of-type(5) svg path {
     stroke-dasharray: 0 0 20.16 20.16;
     fill: none;
@@ -802,6 +837,7 @@ section:nth-of-type(5) div:nth-of-type(1) {
     height: 2px;
     background-color: var(--color);
 
+    /* Sterren als box-shadows */
     box-shadow:
         -2em 3em 0 var(--color),
         5em -6em 0 var(--color),
@@ -824,18 +860,18 @@ section:nth-of-type(5) div {
 }
 
 
-
+/* De ster volgt de path van de lijn  */
 section:nth-of-type(5) div figure {
     z-index: 1;
     position: absolute;
     top: 0;
-
+    /* De ster */
     clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
     width: 10em;
     height: 10em;
     background-color: #c8ff00;
 
-
+    /* Path van de lijn */
     offset-path: path("m59.22,186.26c56.79,7.03,178.43,13.28,213.4-55.31,46.12-90.47-45.28-117.08-45.28-117.08,0,0-94.27-28.97-140.4,7.69-46.12,36.66-41.83,84.43-17.74,111.76,39.62,44.94,224.65,36.26,249.46-31.34,9.05-24.66,1.72-45.73-6.19-59.22");
     /* offset-rotate: auto; */
     animation: follow-path 4s linear alternate infinite;
