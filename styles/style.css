@@ -47,7 +47,7 @@ header {
 }
 
 header h1 {
-    font-size: 5vw;
+    font-size: 3vw;
     padding: .5em;
 }
 
@@ -59,7 +59,7 @@ section {
     border-radius: 2em;
     /* height: 30rem; */
     scroll-snap-align: center;
-    block-size: 70vmin;
+    block-size: 80vmin;
     aspect-ratio: 1;
     /* background-color: var(--white); */
     filter: drop-shadow(.2em .2em .2em rgba(0, 0, 0, 0.374));
@@ -71,6 +71,21 @@ section h1 {
     position: absolute;
     top: 1em;
     left: 1em;
+}
+
+form {
+
+
+    position: absolute;
+    bottom: 1em;
+    left: 1em;
+
+
+}
+
+form label {
+    color: var(--white);
+    margin-right: .5em;
 }
 
 /************************/
@@ -128,8 +143,9 @@ section:nth-of-type(1) figure {
     animation-iteration-count: infinite;
     animation-direction: alternate;
     animation-timing-function: linear;
-
+    animation-play-state: paused;
 }
+
 
 
 /* section:nth-of-type(1) figure:hover { 
@@ -346,13 +362,18 @@ section:nth-of-type(1) article article {
     border-radius: 1em;
     background-color: rgba(255, 255, 255, 0.53);
     padding: 2em;
-    transform: rotateX(85deg);
+    transform: rotateX(80deg);
     transition: all 900ms cubic-bezier(0.860, -0.600, 0.065, 1.415);
 }
 
 section:nth-of-type(1) article article:hover {
     cursor: pointer;
     transform: rotateX(0deg);
+}
+
+/* Als de checkbox aangevinkt is dan kan je de animatie spelen */
+body:has(#play-animation-1:checked) section:nth-of-type(1) figure {
+    animation-play-state: running;
 }
 
 /****************************/
@@ -374,6 +395,7 @@ section:nth-of-type(2)>figure {
     animation-name: draaien;
     animation-duration: 2s;
     animation-iteration-count: infinite;
+    animation-play-state: paused;
 }
 
 
@@ -390,22 +412,10 @@ section:nth-of-type(2) figure figure {
     animation-iteration-count: infinite;
     animation-direction: alternate;
     animation-fill-mode: forwards;
+    animation-play-state: paused;
 }
 
-section:nth-of-type(2) form {
 
-
-    position: absolute;
-    bottom: 1em;
-    left: 1em;
-
-
-}
-
-section:nth-of-type(2) form label {
-    color: var(--white);
-    margin-right: .5em;
-}
 
 /* Als je op de blue checkbox aanvinkt dan verander de kleur van de vorm*/
 
@@ -423,6 +433,12 @@ body:has(#pink:checked) figure>figure {
 
 body:has(#blue:checked):has(#pink:checked) figure>figure {
     background-color: rgb(111, 255, 0);
+}
+
+/* Hier pak ik de animaties en ik pauseer ze */
+body:has(#play-animation-2:checked) section:nth-of-type(2)>figure,
+body:has(#play-animation-2:checked) figure figure {
+    animation-play-state: running;
 }
 
 @keyframes draaien {
@@ -458,6 +474,7 @@ section:nth-of-type(3) {
             var(--dark-blue) 20deg 30deg);
 
     animation: rotating-gradient 10s infinite linear;
+    animation-play-state: paused;
 }
 
 @keyframes rotating-gradient {
@@ -479,9 +496,10 @@ section:nth-of-type(3) {
 
 
 
-section>div {
+section:nth-of-type(3)>div {
     animation-name: omhoog;
     animation-duration: 3s;
+
 }
 
 
@@ -492,8 +510,10 @@ section:nth-of-type(3) article:nth-of-type(n + 3) {
     animation-duration: 3s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
+
 }
 
+/* Stijling voor de drie balonnen */
 section:nth-of-type(3) article figure {
     width: 5em;
     height: 5em;
@@ -501,8 +521,10 @@ section:nth-of-type(3) article figure {
     background-color: white;
     border-radius: 50%;
 
+
 }
 
+/* Eerste balon */
 section:nth-of-type(3) article:first-of-type figure {
 
     animation-name: rotate-right;
@@ -510,10 +532,13 @@ section:nth-of-type(3) article:first-of-type figure {
     animation-duration: 4s;
     animation-direction: alternate;
     animation-timing-function: linear;
+
     animation-delay: .3s;
     transform-origin: 0 50%;
+
 }
 
+/* Tweede balon */
 section:nth-of-type(3) article:nth-of-type(2) figure {
 
     animation-name: rotate-left;
@@ -526,6 +551,7 @@ section:nth-of-type(3) article:nth-of-type(2) figure {
     transform-origin: 0 50%;
 }
 
+/* Derde balon */
 section:nth-of-type(3) article:nth-of-type(3) figure {
     width: 2em;
     height: 2em;
@@ -533,13 +559,14 @@ section:nth-of-type(3) article:nth-of-type(3) figure {
     animation-iteration-count: infinite;
     animation-duration: 2s;
     animation-timing-function: cubic-bezier(1.000, -0.600, 0.735, 0.680);
-    ;
+
     animation-direction: alternate;
     animation-delay: .4s;
 
     transform-origin: 0 50%;
 }
 
+/* Deze is de tekst van de vuurwerk  */
 section:nth-of-type(3) article:nth-of-type(4) {
     position: absolute;
     bottom: 1.5em;
@@ -559,6 +586,7 @@ section:nth-of-type(3) article:nth-of-type(4) article:hover {
     cursor: pointer;
     transform: rotateX(0deg);
 }
+
 
 @keyframes rotate-right {
     0% {
@@ -591,8 +619,11 @@ section:nth-of-type(3) article:nth-of-type(4) article:hover {
 }
 
 
+/* Hier g ik al de balonnen en de gradient achtergrond animaties laten spelen als de checkbox aangeven */
 
-
+body:has(#play-animation-3:checked) section:nth-of-type(3) {
+    animation-play-state: running;
+}
 
 /*************/
 /* SECTION 4 */
@@ -601,7 +632,7 @@ section:nth-of-type(3) article:nth-of-type(4) article:hover {
 section:nth-of-type(4) {
     background-color: var(--dark-blue);
     background-image:
-    /* twee linear gradient diagonaal gepostioneerd met harde lijnen. Geef een diagonale vierkant effect */
+        /* twee linear gradient diagonaal gepostioneerd met harde lijnen. Geef een diagonale vierkant effect */
         linear-gradient(45deg,
             darkblue 0 25%,
             transparent 25% 50%,
@@ -623,7 +654,7 @@ section:nth-of-type(4) {
     background-position: left top;
     animation: draaiende-gradient 4s linear infinite alternate;
     background-size:
-    /* Het background-sizes staan op  */
+        /* Het background-sizes staan op  */
         2em 2em,
         2em 2em,
         200% 200%;
@@ -723,36 +754,43 @@ section:nth-of-type(4) figure figure {
     background: transparent;
 } */
 
-#stars-with-line {
+section:nth-of-type(5) svg {
+    display: block;
     width: 100%;
 }
 
-.line {
+section:nth-of-type(5) svg path {
     stroke-dasharray: 0 0 20.16 20.16;
     fill: none;
-}
-
-.line,
-.cls-2 {
-
     stroke: #e6e6e6;
     stroke-miterlimit: 10;
     stroke-width: 6px;
+    z-index: 0;
+    position: absolute;
 }
 
-.stars {
-    width: 2em;
-    fill: #c8ff00;
-    opacity: 1;
-    width: 100%;
-    offset-path: path("m74.07,347.58c90.27,13.59,359.47,40.95,432.07-101.46,87.64-171.91-86.03-222.47-86.03-222.47,0,0-179.13-55.06-266.78,14.61-87.64,69.66-79.49,160.42-33.71,212.36,75.28,85.39,426.87,68.9,474.02-59.55,21.04-57.32-4.51-104.44-21.64-127.46");
-    offset-rotate: auto;
+
+
+section:nth-of-type(5) div {
+    position: relative;
+}
+
+
+
+section:nth-of-type(5) div figure {
+    z-index: 1;
+    position: absolute;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    width: 10em;
+    height: 10em;
+    background-color: #c8ff00;
+
+
+    offset-path: path("m59.22,186.26c56.79,7.03,178.43,13.28,213.4-55.31,46.12-90.47-45.28-117.08-45.28-117.08,0,0-94.27-28.97-140.4,7.69-46.12,36.66-41.83,84.43-17.74,111.76,39.62,44.94,224.65,36.26,249.46-31.34,9.05-24.66,1.72-45.73-6.19-59.22");
+    /* offset-rotate: auto; */
     animation: follow-path 4s linear alternate infinite;
 }
 
-.stars-polygoon {
-    fill: #c8ff00;
-}
 
 
 @keyframes follow-path {
