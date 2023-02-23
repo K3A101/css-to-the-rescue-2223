@@ -452,14 +452,32 @@ body:has(#blue:checked):has(#pink:checked) figure>figure {
 
 section:nth-of-type(3) {
     position: relative;
-    background: repeating-conic-gradient(
-        from 45deg at 42% 65%,
-           var(--dark-blue) 0deg 10deg,
-           slateblue 10deg 20deg,
-           var(--dark-blue) 20deg 30deg  
+    background: repeating-conic-gradient(from var(--angle, 0deg) at 42% 65%,
+            var(--dark-blue) 0deg 10deg,
+            slateblue 10deg 20deg,
+            var(--dark-blue) 20deg 30deg);
 
-           );
+    animation: rotating-gradient 10s infinite linear;
 }
+
+@keyframes rotating-gradient {
+    0% {
+        --angle: 0deg;
+    }
+
+    100% {
+        --angle: 360deg;
+    }
+}
+
+/* Vertel de browser dat je de angle van de gradient wil animeren  */
+@property --angle {
+    syntax: "<angle>";
+    inherits: false;
+    initial-value: 0deg;
+}
+
+
 
 section>div {
     animation-name: omhoog;
@@ -583,14 +601,14 @@ section:nth-of-type(3) article:nth-of-type(4) article:hover {
 section:nth-of-type(4) {
     background-color: var(--dark-blue);
     background-image:
+    /* twee linear gradient diagonaal gepostioneerd met harde lijnen. Geef een diagonale vierkant effect */
         linear-gradient(45deg,
             darkblue 0 25%,
             transparent 25% 50%,
             darkblue 50% 75%,
             transparent 75% 100%),
 
-        linear-gradient(
-            -45deg,
+        linear-gradient(-45deg,
             darkblue 0 25%,
             transparent 25% 50%,
             darkblue 50% 75%,
@@ -605,6 +623,7 @@ section:nth-of-type(4) {
     background-position: left top;
     animation: draaiende-gradient 4s linear infinite alternate;
     background-size:
+    /* Het background-sizes staan op  */
         2em 2em,
         2em 2em,
         200% 200%;
@@ -700,18 +719,49 @@ section:nth-of-type(4) figure figure {
 /***************/
 /* SECTION - 5 */
 /***************/
-.cls-1 {
-    stroke-dasharray: 0 0 20.16 20.16;
+/* section:nth-of-type(5) {
+    background: transparent;
+} */
+
+#stars-with-line {
+    width: 100%;
 }
 
-.cls-1,
-.cls-2 {
+.line {
+    stroke-dasharray: 0 0 20.16 20.16;
     fill: none;
+}
+
+.line,
+.cls-2 {
+
     stroke: #e6e6e6;
     stroke-miterlimit: 10;
     stroke-width: 6px;
 }
 
-.cls-3 {
-    fill: #f7931e;
+.stars {
+    width: 2em;
+    fill: #c8ff00;
+    opacity: 1;
+    width: 100%;
+    offset-path: path("m74.07,347.58c90.27,13.59,359.47,40.95,432.07-101.46,87.64-171.91-86.03-222.47-86.03-222.47,0,0-179.13-55.06-266.78,14.61-87.64,69.66-79.49,160.42-33.71,212.36,75.28,85.39,426.87,68.9,474.02-59.55,21.04-57.32-4.51-104.44-21.64-127.46");
+    offset-rotate: auto;
+    animation: follow-path 4s linear alternate infinite;
+}
+
+.stars-polygoon {
+    fill: #c8ff00;
+}
+
+
+@keyframes follow-path {
+    0% {
+        offset-distance: 0%;
+    }
+
+    100% {
+
+        offset-distance: 100%;
+    }
 }
