@@ -47,23 +47,21 @@ header {
 }
 
 header h1 {
-    background-image: 
-    repeating-linear-gradient(
-        45deg,
-        crimson, 
-        deepskyblue,
-        magenta
-    );
+    background-image:
+        repeating-linear-gradient(45deg,
+            crimson,
+            deepskyblue,
+            magenta);
 
     /* De background ga naaŕde text */
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
-    
- color: black;
+
+    color: black;
     font-size: 3vw;
     padding: .5em;
-   
+
 
 
     animation: gradient-tekst 1s infinite;
@@ -72,14 +70,14 @@ header h1 {
 }
 
 
-@keyframes gradient-text{
- 0% {
-    background-position: top left;
- }
+@keyframes gradient-text {
+    0% {
+        background-position: top left;
+    }
 
- 100%{
+    100% {
         background-position: bottom right;
- }
+    }
 }
 
 /* Items */
@@ -165,15 +163,31 @@ section:nth-of-type(1) figure {
         3em 2em 0 rebeccapurple,
         4em 2em 0 yellow,
         5em 2em 0 darkslategray,
-        6em 2em 0 sienna;
+        6em 2em 0 sienna,
+
+        0 3em 0 lightcoral,
+        1em 3em 0 darkblue,
+        2em 3em 0 white,
+        3em 3em 0 lime,
+        4em 3em 0 brown,
+        5em 3em 0 mediumaquamarine,
+        6em 3em 0 burlywood,
+
+        0 -3em 0 olive,
+        1em -3em 0 indianred,
+        2em -3em 0 red,
+        3em -3em 0 darkgreen,
+        4em -3em 0 white,
+        5em -3em 0 lime,
+        6em -3em 0 brown;
 
 
 
     animation-name: pixels;
-    animation-duration: 3s;
+    animation-duration: 2s;
     animation-iteration-count: infinite;
-    animation-direction: alternate;
     animation-timing-function: linear;
+    animation-direction: alternate;
     animation-play-state: paused;
 }
 
@@ -243,7 +257,23 @@ section:nth-of-type(1) figure {
             3em 2em 0 palevioletred,
             4em 2em 0 powderblue,
             5em 2em 0 limegreen,
-            6em 2em 0 darkorange;
+            6em 2em 0 darkorange,
+
+            0 3em 0 rosybrown,
+            1em 3em 0 green,
+            2em 3em 0 orchid,
+            3em 3em 0 yellow,
+            4em 3em 0 black,
+            5em 3em 0 lavenderblush,
+            6em 3em 0 lightseagreen,
+
+            0 -3em 0 dodgerblue,
+            1em -3em 0 mediumpurple,
+            2em -3em 0 mediumturquoise,
+            3em -3em 0 yellow,
+            4em -3em 0 brown,
+            5em -3em 0 cornsilk,
+            6em -3em 0 lavender;
 
 
     }
@@ -288,7 +318,23 @@ section:nth-of-type(1) figure {
             3em 2em 0 aquamarine,
             4em 2em 0 plum,
             5em 2em 0 yellowgreen,
-            6em 2em 0 darkred;
+            6em 2em 0 darkred,
+
+            0 3em 0 aquamarine,
+            1em 3em 0 darkmagenta,
+            2em 3em 0 orchid,
+            3em 3em 0 mediumslateblue,
+            4em 3em 0 wheat,
+            5em 3em 0 red,
+            6em 3em 0 lime,
+
+            0 -3em 0 beige,
+            1em -3em 0 honeydew,
+            2em -3em 0 hotpink,
+            3em -3em 0 aquamarine,
+            4em -3em 0 blue,
+            5em -3em 0 darkred,
+            6em -3em 0 cornflowerblue;
 
 
     }
@@ -333,7 +379,23 @@ section:nth-of-type(1) figure {
             3em 2em 0 navy,
             4em 2em 0 brown,
             5em 2em 0 lavender,
-            6em 2em 0 lightcyan;
+            6em 2em 0 lightcyan,
+
+            0 3em 0 indigo,
+            1em 3em 0 mistyrose,
+            2em 3em 0 mintcream,
+            3em 3em 0 skyblue,
+            4em 3em 0 turquoise,
+            5em 3em 0 cornflowerblue,
+            6em 3em 0 navy,
+
+            0 -3em 0 greenyellow,
+            1em -3em 0 orange,
+            2em -3em 0 moccasin,
+            3em -3em 0 purple,
+            4em -3em 0 silver,
+            5em -3em 0 blueviolet,
+            6em -3em 0 magenta;
     }
 
     100% {
@@ -376,7 +438,23 @@ section:nth-of-type(1) figure {
             3em 2em 0 wheat,
             4em 2em 0 lime,
             5em 2em 0 deeppink,
-            6em 2em 0 dodgerblue;
+            6em 2em 0 dodgerblue,
+
+            0 3em 0 blue,
+            1em 3em 0 dodgerblue,
+            2em 3em 0 pink,
+            3em 3em 0 orangered,
+            4em 3em 0 salmon,
+            5em 3em 0 lavender,
+            6em 3em 0 springgreen,
+
+            0 -3em 0 lightcoral,
+            1em -3em 0 darkblue,
+            2em -3em 0 white,
+            3em -3em 0 lime,
+            4em -3em 0 brown,
+            5em -3em 0 mediumaquamarine,
+            6em -3em 0 burlywood;
     }
 }
 
@@ -660,6 +738,12 @@ body:has(#play-animation-3:checked) section:nth-of-type(3) {
 /*************/
 /* SECTION 4 */
 /*************/
+section:nth-of-type(4) h1 {
+    background-color: rgba(0, 0, 0, 0.374);
+    padding: 1em;
+    border-radius: 1em;
+}
+
 /* Gradients */
 section:nth-of-type(4) {
     background-color: var(--dark-blue);
@@ -684,25 +768,25 @@ section:nth-of-type(4) {
             yellow);
 
     background-position: left top;
-    animation: draaiende-gradient 4s linear infinite alternate;
+    animation: draaiende-gradient 10s linear infinite;
     background-size:
         /* Het background-sizes staan op  */
         2em 2em,
         2em 2em,
         200% 200%;
-
+    animation-play-state: paused;
 }
 
 
 @keyframes draaiende-gradient {
     0% {
-        background-position: left top;
+        background-position: top left;
     }
 
 
 
     100% {
-        background-position: right bottom;
+        background-position: bottom right;
     }
 }
 
@@ -718,6 +802,7 @@ section:nth-of-type(4)>figure {
     animation-timing-function: linear;
     animation-direction: alternate;
     animation-fill-mode: forwards;
+    animation-play-state: paused;
 
 }
 
@@ -738,7 +823,7 @@ section:nth-of-type(4) figure figure {
     aspect-ratio: 1;
     border-radius: 50%;
     background:
-    /* Gradient voor de bal */
+        /* Gradient voor de bal */
         radial-gradient(circle at top left,
             crimson,
             yellow,
@@ -757,6 +842,7 @@ section:nth-of-type(4) figure figure {
     animation-timing-function: linear;
     animation-direction: alternate;
     /* background-size: 200% 200%; */
+    animation-play-state: paused;
 
 }
 
@@ -780,6 +866,12 @@ section:nth-of-type(4) figure figure {
     }
 }
 
+body:has(#play-animation-4:checked) section:nth-of-type(4),
+body:has(#play-animation-4:checked) section:nth-of-type(4) figure {
+    animation-play-state: running;
+}
+
+
 /***************/
 /* SECTION - 5 */
 /***************/
@@ -793,9 +885,7 @@ section:nth-of-type(5) {
             transparent 0 92%,
             black 90%),
         /* maan */
-        radial-gradient(
-            
-            circle at 80% 80%,
+        radial-gradient(circle at 80% 80%,
             white 10%,
             transparent 10% 0),
         /* Nacht */
@@ -818,6 +908,7 @@ section:nth-of-type(5) svg {
     width: 100%;
 
 }
+
 /* Stijling voor de lijn */
 section:nth-of-type(5) svg path {
     stroke-dasharray: 0 0 20.16 20.16;
@@ -846,12 +937,11 @@ section:nth-of-type(5) div:nth-of-type(1) {
         25em -6em 0 var(--color),
         -10em -5em 0 var(--color),
         -20em 9em 0 var(--color),
-         4em -8em 0 var(--color),
+        4em -8em 0 var(--color),
         10em 5em 0 var(--color),
         -5em -2em 0 var(--color),
         25em -6em 0 var(--color),
         -25em -5em 0 var(--color)
-
 }
 
 
@@ -875,6 +965,8 @@ section:nth-of-type(5) div figure {
     offset-path: path("m59.22,186.26c56.79,7.03,178.43,13.28,213.4-55.31,46.12-90.47-45.28-117.08-45.28-117.08,0,0-94.27-28.97-140.4,7.69-46.12,36.66-41.83,84.43-17.74,111.76,39.62,44.94,224.65,36.26,249.46-31.34,9.05-24.66,1.72-45.73-6.19-59.22");
     /* offset-rotate: auto; */
     animation: follow-path 4s linear alternate infinite;
+    animation-play-state: paused;
+    animation-fill-mode: forwards;
 }
 
 
@@ -888,4 +980,8 @@ section:nth-of-type(5) div figure {
 
         offset-distance: 100%;
     }
+}
+
+body:has(#play-animation-5:checked) div figure{
+    animation-play-state: running;
 }
