@@ -199,3 +199,35 @@ In de derde voortgang heb ik mijn voortgang besproken. Ik heb nieuwe verandering
 - Uitkijken voor mensen met epilepsie
 - Iets laten gebeuren als het reponsive is
 - De rest van de vakje vullen met experimenten.
+
+---
+# Wat heb ik geleerd
+ - De titel geanimeerd met een gradient effect
+ - De achtergond van de pagina naar een donker blauw verandert
+ - Heb ik de zesde vakje gevuld met animaties
+ - Ik had de color scheme gezet naar donker.
+
+
+ ## Andere achtergrond
+ De donkere achtergrond zorgt ervoor dat vakjes meer opvallender zijn. Hiermee kan meer focussen op de vuurwerkshow. 
+
+<img src="./images/andere-achtergrond.png">
+
+## Zesde vakje
+Ik heb de zesde vakje gevuld met een andere animatie. Het landschap gemaakt met gradients en een picnic tapijt, dus jij (de kijker), zit je vuurwerk te kijken in de park.
+<img src="./images/picnic-show.png">
+
+### Wat heb ik gebruikt:
+- `radial-gradient()`
+-  `linear-gradient()`
+- `conic-gradient()`
+- `box-shadows`
+
+Bij deze link krijg je het uitgebreide code te zien:
+- [Vuurwerk in de park code](https://github.com/K3A101/css-to-the-rescue-2223/wiki/animaties#vuurwerk-in-de-park)
+
+---
+## Soort van responsive
+Verder heb ik de showcase responsive gemaakt door de vakjes onder elkaar te zetten bij kleinere scheremen. Het is niet niet helemaal perfect maar alle animaties zijn te zien. Maar mijn focus ligt aan de desktop versie.
+
+<img src="./images/responsive.png">

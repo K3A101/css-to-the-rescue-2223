@@ -1063,6 +1063,7 @@ section:nth-of-type(6) article:nth-of-type(2) div {
 
 }
 
+/* Knipperende box-shadow vuurwerk */
 @keyframes box-shadow-vuurwerk {
 
     0%,
@@ -1175,3 +1176,18 @@ body:has(#play-animation-6:checked) article div {
 }
 
 
+@media (max-width: 30em) {
+main {
+    scroll-snap-type:  y mandatory;
+    flex-direction: column;
+}
+
+main section {
+    scroll-snap-align: start;
+}
+
+/* De tapijt */
+section:nth-of-type(6) figure figure {
+block-size: 10em;
+}
+}
