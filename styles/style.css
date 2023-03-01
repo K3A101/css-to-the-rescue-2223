@@ -8,9 +8,11 @@
 
     --dark-blue: #0D0847;
     --white: white;
-    --black: rgb(32, 32, 33);
+    --black: rgb(16, 14, 44);
     --algemene-font: 'inter', sans-serif;
 }
+
+
 
 body {
     /* height: 100vh; */
@@ -18,8 +20,9 @@ body {
     place-content: center;
     align-items: center;
     width: 100%;
-    /* background-color: var(--dark-blue); */
+    background: var(--black);
     font-family: var(--algemene-font);
+    color-scheme: dark;
 }
 
 /* Container */
@@ -47,11 +50,25 @@ header {
 }
 
 header h1 {
-    background-image:
+    /* background-image:
         repeating-linear-gradient(45deg,
             crimson,
             deepskyblue,
-            magenta);
+            magenta); */
+background-image: linear-gradient(45deg,
+            crimson,
+            darkorange,
+            gold,
+            limegreen,
+            dodgerblue,
+            blueviolet,
+            crimson,
+            darkorange,
+            gold,
+            limegreen,
+            dodgerblue,
+            blueviolet,
+            crimson);
 
     /* De background ga naaŕde text */
     -webkit-text-fill-color: transparent;
@@ -64,19 +81,26 @@ header h1 {
 
 
 
-    animation: gradient-tekst 1s infinite;
-
+    animation: gradient-text 1s linear infinite ;
+ background-position: left top;
+ background-size: 200% 200%;
+ animation-play-state: paused;
 
 }
 
 
+header h1:hover {
+    cursor: pointer;
+    animation-play-state: running;
+}
+
 @keyframes gradient-text {
     0% {
-        background-position: top left;
+        background-position: left top;
     }
 
     100% {
-        background-position: bottom right;
+        background-position: right bottom;
     }
 }
 
@@ -982,6 +1006,172 @@ section:nth-of-type(5) div figure {
     }
 }
 
-body:has(#play-animation-5:checked) div figure{
+body:has(#play-animation-5:checked) div figure {
     animation-play-state: running;
 }
+
+
+/*************/
+/* SECTION-6 */
+/*************/
+
+section:nth-of-type(6) {
+    position: relative;
+    background-image:
+        linear-gradient(transparent 0 71%,
+            rgb(42, 121, 48) 70% 0),
+
+        radial-gradient(circle at 50% 100%,
+            #18dcff,
+            #a1bdff,
+            #5c20aa);
+}
+
+section:nth-of-type(6) article:nth-of-type(1) {
+    z-index: 1;
+    position: absolute;
+    bottom: 0;
+    left: 40%;
+}
+
+section:nth-of-type(6) article:nth-of-type(1) div {
+    height: 5em;
+    width: 2em;
+    background-color: rgb(61, 129, 255);
+    transition: 1s, .5s;
+    animation-name: vuurpijlen, boom;
+    animation-duration: 2s, 1s;
+    animation-fill-mode: forwards, forwards;
+    animation-iteration-count: 2, 1;
+    animation-delay: 0s, 4s;
+    animation-direction: alternate;
+    animation-play-state: paused;
+}
+
+section:nth-of-type(6) article:nth-of-type(2) div {
+    width: 1em;
+    height: 1em;
+    box-shadow:
+        2em -10em 0 deeppink,
+        5em -5em 0 purple,
+         -5em 3em yellow;
+
+    background-color: #c8ff00;
+    animation-name: box-shadow-vuurwerk;
+    animation-duration: 1s; 
+    animation-iteration-count: infinite;
+
+}
+
+@keyframes box-shadow-vuurwerk {
+
+    0%,
+    100% {
+       
+        box-shadow:
+                2em -10em 0 rgb(36, 20, 255),
+                5em -5em 0 transparent,
+                -5em 3em yellow;
+
+    }
+    
+    40% {
+        box-shadow: 
+        2em -10em 0 rgb(36, 20, 255),
+            5em -5em 0 transparent,
+        -5em 3em transparent; 
+      
+    }
+
+
+
+    50% {
+      
+        box-shadow:
+            2em -10em 0 transparent,
+            5em -5em 0 purple,
+            -5em 3em salmon;
+    }
+
+
+    70% {
+          background-color: transparent;
+    }
+}
+
+@keyframes vuurpijlen {
+    0% {
+        height: 1em;
+        transform: translateY(10%);
+    }
+
+    100% {
+        height: 8em;
+        transform: translateY(-500%);
+    }
+}
+
+@keyframes boom {
+    0% {
+        /* opacity: 1; */
+        height: 8em;
+        width: 5em;
+        transform: scale(1) translateY(0%);
+    }
+
+
+
+    99% {
+        /* filter: blur(30px); */
+        opacity: 1;
+        transform: scale(2) translateY(-500%);
+    }
+
+    100% {
+        transform: scale(3);
+        filter: blur(30px);
+        opacity: 0;
+
+    }
+}
+
+
+
+section:nth-of-type(6)>figure {
+    position: absolute;
+    bottom: -10%;
+    left: 20%;
+    perspective: 26em;
+    transform-style: preserve-3d;
+}
+
+
+/* Het tapijt */
+section:nth-of-type(6) figure figure {
+    /* position: absolute; */
+    transform: rotateX(70deg);
+
+    block-size: 22em;
+    aspect-ratio: 1;
+    background-color: #6565d6;
+    /* border-radius: 0 0 2em 2em; */
+
+    /* de picnic tapijt */
+    background-image:
+        conic-gradient(from 45deg,
+            white 0% 25%,
+            crimson 26% 50%,
+            white 51% 75%,
+            crimson 76% 100%);
+
+
+    background-size:
+        3em 3em;
+}
+
+/* Zorgt ervoor dat de animatie stopt met */
+body:has(#play-animation-6:checked) article div {
+    animation-play-state: running;
+}
+
+

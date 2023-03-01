@@ -183,3 +183,19 @@ section:nth-of-type(5) div figure {
 --- 
 # Meer interactie
 VAls laatste heb ik meer interactie toegevoegd in mijn slideshow. Ik heb het zo gedaan dat je met de check box de animatie laten spelen en pauseren. Dit waren allemaal mogelijk met de has selector. 
+
+
+--- 
+# Voortgang 3
+
+In de derde voortgang heb ik mijn voortgang besproken. Ik heb nieuwe verandering aan het groep gepresenteerd.
+- nieuwe gradient trucjes
+- De opstapelede box-shadows
+- Motion path
+- Nieuwe vorm van interactie
+
+## feedback
+
+- Uitkijken voor mensen met epilepsie
+- Iets laten gebeuren als het reponsive is
+- De rest van de vakje vullen met experimenten.
