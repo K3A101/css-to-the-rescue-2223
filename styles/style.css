@@ -34,14 +34,11 @@ main {
     padding: .5em;
     place-self: center;
     scroll-snap-type: x mandatory;
-
     overflow-x: auto;
     display: flex;
     gap: 1.5em;
-
     width: 80%;
     overflow-y: hidden;
-
 }
 
 h1 {
@@ -132,13 +129,9 @@ section h1 {
 }
 
 form {
-
-
     position: absolute;
     bottom: 1em;
     left: 1em;
-
-
 }
 
 form label {
@@ -511,7 +504,6 @@ section:nth-of-type(1)>article {
     position: absolute;
     bottom: 1.5em;
     right: 1.5em;
-
 }
 
 section:nth-of-type(1) article article {
@@ -544,7 +536,7 @@ section:nth-of-type(2) {
 }
 
 section:nth-of-type(2)>figure {
-      animation-name: draaien;
+    animation-name: draaien;
     animation-duration: 2s;
     animation-iteration-count: infinite;
     animation-play-state: paused;
@@ -554,8 +546,6 @@ section:nth-of-type(2)>figure {
 section:nth-of-type(2) figure figure {
     width: 10em;
     clip-path: polygon(50% 0%, 100% 50%, 100% 50%, 50% 100%, 50% 100%, 0% 50%, 50% 0%);
-    /* clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); */
-    aspect-ratio: 1;
     background-color: gold;
     transform-style: preserve-3d;
     /* Het wordt een 3d ruimte */
@@ -594,13 +584,10 @@ section:nth-of-type(2) article article:hover {
 
 body:has(#blue:checked) figure>figure {
     background-color: rgb(112, 114, 231);
-
-
 }
 
 body:has(#pink:checked) figure>figure {
     background-color: rgb(223, 37, 161);
-
 
 }
 
@@ -616,49 +603,32 @@ body:has(#play-animation-2:checked) figure figure {
 
 /* Animaties  */
 @keyframes draaien {
-    0% {
-        transform: rotateY(0turn);
-    }
-
-    100% {
-        transform: rotateY(1turn)
-    }
+    0% { transform: rotateY(0turn);  }
+    100% { transform: rotateY(1turn)}
 }
 
 @keyframes groter {
-    0% {
-        transform: scale(0)
-    }
-
-    100% {
-        transform: scale(-200%)
-    }
+    0% { transform: scale(0)  }
+    100% { transform: scale(-200%) }
 }
-
 
 /*****************************************/
 /* SECTION 3 - Draainende Conic Gradient */
 /*****************************************/
-
 section:nth-of-type(3) {
     position: relative;
-    background: repeating-conic-gradient(from var(--angle, 0deg) at 44% 63%,
+    background: repeating-conic-gradient(
+        from var(--angle, 0deg) at 44% 63%,
             var(--dark-blue) 0deg 10deg,
             slateblue 10deg 20deg,
             var(--dark-blue) 20deg 30deg);
-
     animation: rotating-gradient 10s infinite linear;
     animation-play-state: paused;
 }
 
 @keyframes rotating-gradient {
-    0% {
-        --angle: 0deg;
-    }
-
-    100% {
-        --angle: 360deg;
-    }
+    0% { --angle: 0deg; }
+    100% {  --angle: 360deg;}
 }
 
 /* Vertel de browser dat je de angle van de gradient wil animeren  */
@@ -668,14 +638,10 @@ section:nth-of-type(3) {
     initial-value: 0deg;
 }
 
-
-
 section:nth-of-type(3)>div {
     animation-name: omhoog;
     animation-duration: 3s;
-
 }
-
 
 section:nth-of-type(3) article:nth-of-type(n + 3) {
     perspective: 10em;
@@ -684,7 +650,6 @@ section:nth-of-type(3) article:nth-of-type(n + 3) {
     animation-duration: 3s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
-
 }
 
 /* Stijling voor de drie balonnen */
@@ -694,22 +659,17 @@ section:nth-of-type(3) article figure {
     aspect-ratio: 1;
     background-color: white;
     border-radius: 50%;
-
-
 }
 
 /* Eerste balon */
 section:nth-of-type(3) article:first-of-type figure {
-
     animation-name: rotate-right;
     animation-iteration-count: infinite;
     animation-duration: 4s;
     animation-direction: alternate;
     animation-timing-function: linear;
-
     animation-delay: .3s;
     transform-origin: 0 50%;
-
 }
 
 /* Tweede balon */
@@ -720,8 +680,6 @@ section:nth-of-type(3) article:nth-of-type(2) figure {
     animation-duration: 2s;
     animation-timing-function: linear;
     animation-direction: alternate;
-
-
     transform-origin: 0 50%;
 }
 
@@ -733,10 +691,8 @@ section:nth-of-type(3) article:nth-of-type(3) figure {
     animation-iteration-count: infinite;
     animation-duration: 2s;
     animation-timing-function: cubic-bezier(1.000, -0.600, 0.735, 0.680);
-
     animation-direction: alternate;
     animation-delay: .4s;
-
     transform-origin: 0 50%;
 }
 
@@ -745,7 +701,6 @@ section:nth-of-type(3) article:nth-of-type(4) {
     position: absolute;
     bottom: 1.5em;
     right: 1.5em;
-
 }
 
 section:nth-of-type(3) article:nth-of-type(4) article {
@@ -761,40 +716,22 @@ section:nth-of-type(3) article:nth-of-type(4) article:hover {
     transform: rotateX(0deg);
 }
 
-
 @keyframes rotate-right {
-    0% {
-        transform: rotateY(0) scale(0);
-    }
-
-    100% {
-        transform: rotate(360deg) scale(2);
-    }
+    0% { transform: rotateY(0) scale(0); }
+    100% {transform: rotate(360deg) scale(2);  }
 }
 
 @keyframes rotate-left {
-    0% {
-        transform: rotateY(0) scale(0);
-    }
-
-    100% {
-        transform: rotate(360deg) scale(2);
-    }
+    0% {transform: rotateY(0) scale(0); }
+    100% {transform: rotate(360deg) scale(2);}
 }
 
 @keyframes bewegen {
-    0% {
-        transform: translateZ(0);
-    }
-
-    100% {
-        transform: translateZ(-50%);
-    }
+    0% { transform: translateZ(0); }
+    100% {transform: translateZ(-50%);}
 }
 
-
 /* Hier g ik al de balonnen en de gradient achtergrond animaties laten spelen als de checkbox aangeven */
-
 body:has(#play-animation-3:checked) section:nth-of-type(3) {
     animation-play-state: running;
 }
@@ -842,13 +779,10 @@ section:nth-of-type(4) {
     animation-play-state: paused;
 }
 
-
 @keyframes draaiende-gradient {
     0% { background-position: top left; }
     100% { background-position: bottom right; }
 }
-
-
 
 section:nth-of-type(4)>figure {
     position: absolute;
@@ -861,7 +795,6 @@ section:nth-of-type(4)>figure {
     animation-direction: alternate;
     animation-fill-mode: forwards;
     animation-play-state: paused;
-
 }
 
 @keyframes omhoog {
@@ -894,7 +827,6 @@ section:nth-of-type(4) figure figure {
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     animation-direction: alternate;
-    /* background-size: 200% 200%; */
     animation-play-state: paused;
 }
 
@@ -912,7 +844,6 @@ section:nth-of-type(4)>article {
     position: absolute;
     bottom: 1.5em;
     right: 3em;
-
 }
 
 section:nth-of-type(4) article article {
@@ -935,7 +866,6 @@ body:has(#play-animation-4:checked) section:nth-of-type(4) figure {
     animation-play-state: running;
 }
 
-
 /***********************************/
 /* SECTION 5 - Motion path vuurwerk*/
 /***********************************/
@@ -945,7 +875,7 @@ section:nth-of-type(5) {
     background-color: var(--dark-blue);
     background-image:
         linear-gradient(
-            /* De grond */
+        /* De grond */
             transparent 0 92%,
             black 90%),
         /* maan */
@@ -964,7 +894,6 @@ section:nth-of-type(5) {
         100% 100%;
 
     background-repeat: no-repeat;
-
 }
 
 section:nth-of-type(5) svg {
@@ -981,7 +910,6 @@ section:nth-of-type(5) svg path {
     stroke-width: 6px;
     z-index: 0;
     position: absolute;
-
 }
 
 /* De sterren */
@@ -1007,11 +935,9 @@ section:nth-of-type(5) div:nth-of-type(1) {
         -25em -5em 0 var(--color)
 }
 
-
 section:nth-of-type(5) div {
     position: relative;
 }
-
 
 /* De ster volgt de path van de lijn  */
 section:nth-of-type(5) div figure {
@@ -1035,14 +961,8 @@ section:nth-of-type(5) div figure {
 
 
 @keyframes follow-path {
-    0% {
-        offset-distance: 0%;
-    }
-
-    100% {
-
-        offset-distance: 100%;
-    }
+    0% { offset-distance: 0%;}
+    100% {offset-distance: 100%;}
 }
 
 /* Informatie over het vuurwerk */
@@ -1052,7 +972,6 @@ section:nth-of-type(5)>article {
     position: absolute;
     bottom: 1.5em;
     right: 1em;
-
 }
 
 section:nth-of-type(5) article article {
@@ -1072,7 +991,6 @@ section:nth-of-type(5) article article:hover {
 body:has(#play-animation-5:checked) div figure {
     animation-play-state: running;
 }
-
 
 /***********************************/
 /* SECTION 6 - Vuurwerk in de park */
@@ -1201,14 +1119,12 @@ section:nth-of-type(6)>figure {
     transform-style: preserve-3d;
 }
 
-
 /* Het tapijt */
 section:nth-of-type(6) figure figure {
     transform: rotateX(70deg);
     block-size: 22em;
     aspect-ratio: 1;
     background-color: #6565d6;
-   
 
     /* de picnic tapijt */
     background-image:
@@ -1217,7 +1133,6 @@ section:nth-of-type(6) figure figure {
             crimson 26% 50%,
             white 51% 75%,
             crimson 76% 100%);
-
 
     background-size:
         3em 3em;
@@ -1230,7 +1145,6 @@ section:nth-of-type(6) article:nth-of-type(3) {
     position: absolute;
     bottom: 1.5em;
     right: 10em;
-
 }
 
 section:nth-of-type(6) article:nth-of-type(3)>article {
@@ -1252,8 +1166,6 @@ body:has(#play-animation-6:checked) article div {
     animation-play-state: running;
 }
 
-
-
 /*****************************************/
 /* SECTION 7 - VUURWERK ACHTER DE BERGEN */
 /*****************************************/
@@ -1274,7 +1186,6 @@ section:nth-of-type(7) {
 
 /* Eerste berg */
 section:nth-of-type(7) article:nth-of-type(1) {
-
     bottom: 1em;
     left: 0;
     background-color: black;
@@ -1285,7 +1196,6 @@ section:nth-of-type(7) article:nth-of-type(1) {
 
 /* Tweede Berg */
 section:nth-of-type(7) article:nth-of-type(2) {
-
     bottom: 1em;
     right: 0;
     background-color: black;
@@ -1305,14 +1215,12 @@ section:nth-of-type(7) article {
 section:nth-of-type(7) article figure {
     width: 5em;
     height: 5em;
-
     background-color: white;
     background-image:
         linear-gradient(45deg,
             white,
             salmon);
     border-radius: 50%;
-
 }
 
 section:nth-of-type(7) article:nth-of-type(3),
@@ -1328,38 +1236,31 @@ section:nth-of-type(7) article:nth-of-type(5) {
     animation-iteration-count: infinite;
 }
 
-
 /* Eerste balletje */
 section:nth-of-type(7) article:nth-of-type(3) {
     bottom: 1em;
     left: 15%;
     z-index: -2;
-
 }
 
 section:nth-of-type(7) article:nth-of-type(3) figure {
-    /* clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%); */
-
     border-radius: 50%;
     transform-origin: top center;
     animation-name: spinnen-1;
     animation-duration: .5s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
-
 }
 
 /* Tweede balletje */
 section:nth-of-type(7) article:nth-of-type(4) figure {
     clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
-
     border-radius: 50%;
     transform-origin: center left;
     animation-name: spinnen-2;
     animation-duration: .5s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
-
 }
 
 section:nth-of-type(7) article:nth-of-type(4) {
@@ -1368,8 +1269,6 @@ section:nth-of-type(7) article:nth-of-type(4) {
     left: 50%;
     z-index: -2;
 }
-
-
 
 /* Derde balletje */
 section:nth-of-type(7) article:nth-of-type(5) figure {
@@ -1380,7 +1279,6 @@ section:nth-of-type(7) article:nth-of-type(5) figure {
     animation-duration: .5s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
-
 }
 
 section:nth-of-type(7) article:nth-of-type(5) {
@@ -1412,50 +1310,24 @@ section:nth-of-type(7)>div {
         -2em 6em 0 white;
 }
 
-
 @keyframes spinnen-1 {
-    0% {
-        transform: rotateY(0turn);
-    }
-
-
-    100% {
-        transform: rotateY(1turn);
-    }
+    0% {transform: rotateY(0turn);}
+    100% {transform: rotateY(1turn);}
 }
 
 @keyframes spinnen-2 {
-    0% {
-        transform: rotateX(0turn);
-    }
-
-
-    100% {
-        transform: rotateX(1turn);
-    }
+    0% {transform: rotateX(0turn);}
+    100% {transform: rotateX(1turn);}
 }
 
-
 @keyframes spinnen-3 {
-    0% {
-        transform: rotateZ(0turn);
-    }
-
-
-    100% {
-        transform: rotateZ(1turn);
-    }
+    0% {transform: rotateZ(0turn);}
+    100% {transform: rotateZ(1turn); }
 }
 
 @keyframes omhoog-gaan {
-    0% {
-        transform: translateY(0);
-    }
-
-    100% {
-        transform: translateY(-600%);
-    }
-
+    0% {transform: translateY(0);}
+    100% {transform: translateY(-600%);}
 }
 
 @media (max-width: 30em) {
