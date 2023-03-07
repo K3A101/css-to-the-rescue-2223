@@ -1,5 +1,18 @@
 # Eindopdracht - Interactieve vuurwerkshow
 
+In deze vak had ik de kans gekregen om los te gaan met CSS. Ik ging CSS technieken ondoerzoeken die ik nooit had gebruikt en daarmee een interactieve vuurwerk showcase maken. De naam zeg het al. Mijn project is een slideshow met verschillende vuurwerkshows waar je kan zelf bedienen. In elke slide is er een CSS techniek die ik had onderzocht en in de show geimplemnteerd. 
+
+![poster van de slideshow](./images/poster-voor-readme.png)
+---
+# Het proces
+
+- [Week 1]()
+- [Week 2]()
+- [Week 3]()
+- [Week 4]()
+---
+
+
 ## Week 1 - Planning
 De opdracht die ik ga kiezen is de Interactieve vuurwerkshow.
 
@@ -45,7 +58,7 @@ CSS technieken zoals:
 Stapje van de versie 
 Idee  vakjes met verschillende vuurwerken, dus met animatie en de vakken swipen met scroll-snap. En andere css technieken proberen
 
-## Planning
+## Planning na voortgang 1
 - CSS technieken onderzoeken en toepassen
 - De layout van de pagina klaar hebben 
 - Themassesie onderwerpen toepassen
@@ -98,20 +111,16 @@ ALs feedback heb ik gekregen dat ik meer context kan toevoegen, zodat iemand and
 
 Gedaan:
 - motion-path
-- gradients
+- Opstapelende geanimeerde Gradients
 - interactie tovoegen
 
 
-## Gradients
+### Gradients
 In de volgende vakjes van mijn vuurwerk showcase ging ik meer experimenteren met gradients. Ook heb ik de gradients geanimeerd en verschillende nieuwe dingen geleerd. Eerst heb ik een onderzoek gedaan over gradients in css om de samenstelling  van de properties beter te begrijpen en daarna in de schowcase te implementeren. Verder heb ik ook de workshop over gradients deelgenomen om meer gericht kennis krijgen. 
 
 Hieronder zijn verschillende experimenten die ik heb geprobeerd:
 
-
-
- 
-
-## 6 gradients
+#### 6 gradients
 - `Linear-gradient()`
 - `radial-gradient()`
 - `conic-gradient()`
@@ -130,7 +139,7 @@ Om de gradients te animeren kan ik de position en de size animeren.
 
 ---
 
-# Motion-path
+### Motion-path
 De volgende trucje voor mijn slideshow was dat ik iets met motion path zou doen. Dit was een uitdaging meaar is wel uiteindelijk gelukt.  Ik heb eerst in illustrator de lijn getekend, en daarna in de code geplaats in een svg eleemnt. Wat ik wilde doen was de ster de path van de lijn volgen. m dat te bereiken heb ik de property `offset-path: path()` gebruikt bij de ster. Om de ster te maken heb ik de de `clip-path: polygoon()` property gebruikt. D path van de lijne heb ik in de offset-path gezet en de ster laten animeren met offset-distance. Van 0% tot 100%. Dus de ster beweegt van 
 ```html
 
@@ -194,30 +203,30 @@ In de derde voortgang heb ik mijn voortgang besproken. Ik heb nieuwe verandering
 - Motion path
 - Nieuwe vorm van interactie
 
-## feedback
+## Feedback van  voortgang 3
 
 - Uitkijken voor mensen met epilepsie
 - Iets laten gebeuren als het reponsive is
 - De rest van de vakje vullen met experimenten.
 
 ---
-# Wat heb ik geleerd
+## Wat heb ik geleerd en gemaakt
  - De titel geanimeerd met een gradient effect
  - De achtergond van de pagina naar een donker blauw verandert
  - Heb ik de zesde vakje gevuld met animaties
  - Ik had de color scheme gezet naar donker.
 
 
- ## Andere achtergrond
+ ### Andere achtergrond
  De donkere achtergrond zorgt ervoor dat vakjes meer opvallender zijn. Hiermee kan meer focussen op de vuurwerkshow. 
 
 <img src="./images/andere-achtergrond.png">
 
-## Zesde vakje
+### Vuurwerk in de Park
 Ik heb de zesde vakje gevuld met een andere animatie. Het landschap gemaakt met gradients en een picnic tapijt, dus jij (de kijker), zit je vuurwerk te kijken in de park.
 <img src="./images/picnic-show.png">
 
-### Wat heb ik gebruikt:
+#### Wat heb ik gebruikt:
 - `radial-gradient()`
 -  `linear-gradient()`
 - `conic-gradient()`
@@ -231,3 +240,28 @@ Bij deze link krijg je het uitgebreide code te zien:
 Verder heb ik de showcase responsive gemaakt door de vakjes onder elkaar te zetten bij kleinere scheremen. Het is niet niet helemaal perfect maar alle animaties zijn te zien. Maar mijn focus ligt aan de desktop versie.
 
 <img src="./images/responsive.png">
+
+---
+# Week 4 
+Dit is de laatste week voor de beeordelingsgesprek. In deze week heb ik  gefocust op de details en puntjes op de i.
+
+## Wat ik heb gedaan
+- De laatste vakje gevuld met animatie
+- Een beschrijving per vuurwerkshow
+- Code opschonen
+- Readme Updaten met nieuwe informatie
+
+---
+
+### Laatste show: Vuurwerk achter de berg
+De laatste vuurwerkshow is een combinatie van alle CSS technieken die ik de laatste vier weken had geleerd. Ik hebe gebruikt gemaakt van gradients, 3D transforms en box-shadows. Wat je ziet is vuurwerkshow die plaatsneem achter de bergen. 
+
+De onderdelen:
+- De landschap die bestaat uit twee linear gradients, een voor de lucht en de andere voor de grond.
+- De bergen,  zijn driekhoeken gevormd door  clip-paths
+- De sterrebn gemaakt met kleine witte box-shadows
+- De vuurwerk zelf zijn de 3D transform animatie
+
+![Laatste vakje](./images/vakje-7.png)
+
+[Hier is de code]()
