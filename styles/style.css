@@ -25,6 +25,10 @@ body {
     color-scheme: dark;
 }
 
+li {
+    list-style: none;
+}
+
 /* Container */
 main {
     padding: .5em;
@@ -49,13 +53,14 @@ header {
     place-items: center;
 }
 
+/* De titel: Interactive firework showcase */
 header h1 {
     /* background-image:
         repeating-linear-gradient(45deg,
             crimson,
             deepskyblue,
             magenta); */
-background-image: linear-gradient(45deg,
+    background-image: linear-gradient(45deg,
             crimson,
             darkorange,
             gold,
@@ -81,10 +86,10 @@ background-image: linear-gradient(45deg,
 
 
 
-    animation: gradient-text 1s linear infinite ;
- background-position: left top;
- background-size: 200% 200%;
- animation-play-state: paused;
+    animation: gradient-text 1s linear infinite;
+    background-position: left top;
+    background-size: 200% 200%;
+    animation-play-state: paused;
 
 }
 
@@ -104,7 +109,7 @@ header h1:hover {
     }
 }
 
-/* Items */
+/* Alle vakjes */
 section {
     display: grid;
     place-content: center;
@@ -174,12 +179,12 @@ section:nth-of-type(1) figure {
         6em -1em 0 coral,
 
         0 -2em 0 indianred,
-        1em -2em 0 deeppink,
+        1em -2em 0 pink,
         2em -2em 0 deepskyblue,
         3em -2em 0 orange,
-        4em -2em 0 lawngreen,
-        5em -2em 0 lavender,
-        6em -2em 0 coral,
+        4em -2em 0 navy,
+        5em -2em 0 yellowgreen,
+        6em -2em 0 aqua,
 
         0 2em 0 darkred,
         1em 2em 0 lightpink,
@@ -203,7 +208,15 @@ section:nth-of-type(1) figure {
         3em -3em 0 darkgreen,
         4em -3em 0 white,
         5em -3em 0 lime,
-        6em -3em 0 brown;
+        6em -3em 0 brown,
+
+        0 -4em 0 darkred,
+        1em -4em 0 mediumvioletred,
+        2em -4em 0 yellow,
+        3em -4em 0 royalblue,
+        4em -4em 0 darkorange,
+        5em -4em 0 slateblue,
+        6em -4em 0 lightcyan;
 
 
 
@@ -214,30 +227,6 @@ section:nth-of-type(1) figure {
     animation-direction: alternate;
     animation-play-state: paused;
 }
-
-
-
-/* section:nth-of-type(1) figure:hover { 
-
-    cursor: pointer;
-   box-shadow: 
-    0 0 0 blue,
-    1em 0 0 yellow,
-    2em 0 0 red,
-    3em 0 0 yellow,
-    4em 0 0 pink,
-    5em 0 0 purple,
-    6em 0 0 dodgerblue,
-    
-    0 1em 0 teal,
-    1em 1em 0 yellow,
-    2em 1em 0 red,
-    3em 1em 0 orange,
-    4em 1em 0 pink,
-    5em 1em 0 whitesmoke,
-    6em 1em 0 coral;
-  
-}*/
 
 
 @keyframes pixels {
@@ -297,7 +286,15 @@ section:nth-of-type(1) figure {
             3em -3em 0 yellow,
             4em -3em 0 brown,
             5em -3em 0 cornsilk,
-            6em -3em 0 lavender;
+            6em -3em 0 lavender,
+
+            0 -4em 0 slateblue,
+            1em -4em 0 slategray,
+            2em -4em 0 orangered,
+            3em -4em 0 royalblue,
+            4em -4em 0 paleturquoise,
+            5em -4em 0 rebeccapurple,
+            6em -4em 0 pink;
 
 
     }
@@ -358,7 +355,15 @@ section:nth-of-type(1) figure {
             3em -3em 0 aquamarine,
             4em -3em 0 blue,
             5em -3em 0 darkred,
-            6em -3em 0 cornflowerblue;
+            6em -3em 0 cornflowerblue,
+
+            0 -4em 0 green,
+            1em -4em 0 magenta,
+            2em -4em 0 red,
+            3em -4em 0 mediumblue,
+            4em -4em 0 darkorange,
+            5em -4em 0 yellow,
+            6em -4em 0 teal;
 
 
     }
@@ -419,7 +424,15 @@ section:nth-of-type(1) figure {
             3em -3em 0 purple,
             4em -3em 0 silver,
             5em -3em 0 blueviolet,
-            6em -3em 0 magenta;
+            6em -3em 0 magenta,
+
+            0 -4em 0 greenyellow,
+            1em -4em 0 deepskyblue,
+            2em -4em 0 mediumturquoise,
+            3em -4em 0 blueviolet,
+            4em -4em 0 yellow,
+            5em -4em 0 tomato,
+            6em -4em 0 lightcyan;
     }
 
     100% {
@@ -478,10 +491,20 @@ section:nth-of-type(1) figure {
             3em -3em 0 lime,
             4em -3em 0 brown,
             5em -3em 0 mediumaquamarine,
-            6em -3em 0 burlywood;
+            6em -3em 0 burlywood,
+
+            0 -4em 0 crimson,
+            1em -4em 0 deeppink,
+            2em -4em 0 olivedrab,
+            3em -4em 0 white,
+            4em -4em 0 salmon,
+            5em -4em 0 indigo,
+            6em -4em 0 aquamarine;
+
     }
 }
 
+/* De naam van de vuurwerk */
 section:nth-of-type(1)>article {
     perspective: 10em;
     transform-style: preserve-3d;
@@ -499,6 +522,7 @@ section:nth-of-type(1) article article {
     transition: all 900ms cubic-bezier(0.860, -0.600, 0.065, 1.415);
 }
 
+/* Als je hovert dan flip de informatie */
 section:nth-of-type(1) article article:hover {
     cursor: pointer;
     transform: rotateX(0deg);
@@ -520,13 +544,7 @@ section:nth-of-type(2) {
 }
 
 section:nth-of-type(2)>figure {
-    /* width: 10em;
-
- aspect-ratio: 1; */
-    /* background-color: gold; */
-    transform-style: preserve-3d;
-    /* Het wordt een 3d ruimte */
-    animation-name: draaien;
+      animation-name: draaien;
     animation-duration: 2s;
     animation-iteration-count: infinite;
     animation-play-state: paused;
@@ -549,7 +567,28 @@ section:nth-of-type(2) figure figure {
     animation-play-state: paused;
 }
 
+/* De informatie van het vuurwerk */
+section:nth-of-type(2)>article {
+    perspective: 20em;
+    transform-style: preserve-3d;
+    position: absolute;
+    bottom: 1.5em;
+    right: 3em;
 
+}
+
+section:nth-of-type(2) article article {
+    border-radius: 1em;
+    background-color: rgba(255, 255, 255, 0.53);
+    padding: 2em;
+    transform: rotateX(90deg);
+    transition: all 900ms cubic-bezier(0.860, -0.600, 0.065, 1.415);
+}
+
+section:nth-of-type(2) article article:hover {
+    cursor: pointer;
+    transform: rotateX(0deg);
+}
 
 /* Als je op de blue checkbox aanvinkt dan verander de kleur van de vorm*/
 
@@ -575,6 +614,7 @@ body:has(#play-animation-2:checked) figure figure {
     animation-play-state: running;
 }
 
+/* Animaties  */
 @keyframes draaien {
     0% {
         transform: rotateY(0turn);
@@ -596,9 +636,9 @@ body:has(#play-animation-2:checked) figure figure {
 }
 
 
-/*************/
-/* SECTION 3 */
-/*************/
+/*****************************************/
+/* SECTION 3 - Draainende Conic Gradient */
+/*****************************************/
 
 section:nth-of-type(3) {
     position: relative;
@@ -700,7 +740,7 @@ section:nth-of-type(3) article:nth-of-type(3) figure {
     transform-origin: 0 50%;
 }
 
-/* Deze is de tekst van de vuurwerk  */
+/* Deze is de naam van de vuurwerk  */
 section:nth-of-type(3) article:nth-of-type(4) {
     position: absolute;
     bottom: 1.5em;
@@ -759,16 +799,17 @@ body:has(#play-animation-3:checked) section:nth-of-type(3) {
     animation-play-state: running;
 }
 
-/*************/
-/* SECTION 4 */
-/*************/
+/*********************************************/
+/* SECTION 4 - BEWEGENDE GRADIENT ACHTERGOND */
+/*********************************************/
+
 section:nth-of-type(4) h1 {
     background-color: rgba(0, 0, 0, 0.374);
     padding: 1em;
     border-radius: 1em;
 }
 
-/* Gradients */
+/* Gradients  achtergrond*/
 section:nth-of-type(4) {
     background-color: var(--dark-blue);
     background-image:
@@ -803,15 +844,8 @@ section:nth-of-type(4) {
 
 
 @keyframes draaiende-gradient {
-    0% {
-        background-position: top left;
-    }
-
-
-
-    100% {
-        background-position: bottom right;
-    }
+    0% { background-position: top left; }
+    100% { background-position: bottom right; }
 }
 
 
@@ -831,16 +865,11 @@ section:nth-of-type(4)>figure {
 }
 
 @keyframes omhoog {
-    0% {
-        transform: translateY(0);
-    }
-
-    100% {
-        transform: translateY(-500%);
-    }
+    0% {  transform: translateY(0); }
+    100% { transform: translateY(-500%); }
 }
 
-
+/* De regenboog bal */
 section:nth-of-type(4) figure figure {
     width: 5em;
     height: 5em;
@@ -867,38 +896,49 @@ section:nth-of-type(4) figure figure {
     animation-direction: alternate;
     /* background-size: 200% 200%; */
     animation-play-state: paused;
-
 }
-
-
 
 /* Met de background-radient zoomt de background van 100% naar 100% */
-
 @keyframes rainbow {
-    0% {
-        background-size: 100%;
-        ;
-    }
-
-    50% {
-        transform: scale(5);
-    }
-
-
-    100% {
-        background-size: 400%;
-    }
+    0% { background-size: 100%;}
+    50% {transform: scale(5);}
+    100% { background-size: 400%; }
 }
 
+/* Naam van de vuurwerk */
+section:nth-of-type(4)>article {
+    perspective: 20em;
+    transform-style: preserve-3d;
+    position: absolute;
+    bottom: 1.5em;
+    right: 3em;
+
+}
+
+section:nth-of-type(4) article article {
+    border-radius: 1em;
+    background-color: rgba(0, 0, 0, 0.53);
+    color: white;
+    padding: 2em;
+    transform: rotateX(85deg);
+    transition: all 900ms cubic-bezier(0.860, -0.600, 0.065, 1.415);
+}
+
+section:nth-of-type(4) article article:hover {
+    cursor: pointer;
+    transform: rotateX(0deg);
+}
+
+/* Als de checkbox aangevinkt is dan speel de animatie */
 body:has(#play-animation-4:checked) section:nth-of-type(4),
 body:has(#play-animation-4:checked) section:nth-of-type(4) figure {
     animation-play-state: running;
 }
 
 
-/***************/
-/* SECTION - 5 */
-/***************/
+/***********************************/
+/* SECTION 5 - Motion path vuurwerk*/
+/***********************************/
 /* Voor de section ga ik een nacht landschap maken met gradient */
 section:nth-of-type(5) {
     position: relative;
@@ -930,7 +970,6 @@ section:nth-of-type(5) {
 section:nth-of-type(5) svg {
     display: block;
     width: 100%;
-
 }
 
 /* Stijling voor de lijn */
@@ -987,7 +1026,7 @@ section:nth-of-type(5) div figure {
 
     /* Path van de lijn */
     offset-path: path("m59.22,186.26c56.79,7.03,178.43,13.28,213.4-55.31,46.12-90.47-45.28-117.08-45.28-117.08,0,0-94.27-28.97-140.4,7.69-46.12,36.66-41.83,84.43-17.74,111.76,39.62,44.94,224.65,36.26,249.46-31.34,9.05-24.66,1.72-45.73-6.19-59.22");
-    /* offset-rotate: auto; */
+   
     animation: follow-path 4s linear alternate infinite;
     animation-play-state: paused;
     animation-fill-mode: forwards;
@@ -1006,15 +1045,39 @@ section:nth-of-type(5) div figure {
     }
 }
 
+/* Informatie over het vuurwerk */
+section:nth-of-type(5)>article {
+    perspective: 20em;
+    transform-style: preserve-3d;
+    position: absolute;
+    bottom: 1.5em;
+    right: 1em;
+
+}
+
+section:nth-of-type(5) article article {
+    border-radius: 1em;
+    background-color: rgba(255, 255, 255, 0.53);
+    color: black;
+    padding: 2em;
+    transform: rotateX(85deg);
+    transition: all 900ms cubic-bezier(0.860, -0.600, 0.065, 1.415);
+}
+
+section:nth-of-type(5) article article:hover {
+    cursor: pointer;
+    transform: rotateX(0deg);
+}
+
 body:has(#play-animation-5:checked) div figure {
     animation-play-state: running;
 }
 
 
-/*************/
-/* SECTION-6 */
-/*************/
-
+/***********************************/
+/* SECTION 6 - Vuurwerk in de park */
+/***********************************/
+/* De landschap */
 section:nth-of-type(6) {
     position: relative;
     background-image:
@@ -1033,7 +1096,7 @@ section:nth-of-type(6) article:nth-of-type(1) {
     bottom: 0;
     left: 40%;
 }
-
+/* Het mini vuurpijl */
 section:nth-of-type(6) article:nth-of-type(1) div {
     height: 5em;
     width: 2em;
@@ -1048,17 +1111,19 @@ section:nth-of-type(6) article:nth-of-type(1) div {
     animation-play-state: paused;
 }
 
+/* Box-shadows vuurwerkjes */
 section:nth-of-type(6) article:nth-of-type(2) div {
     width: 1em;
     height: 1em;
     box-shadow:
         2em -10em 0 deeppink,
         5em -5em 0 purple,
-         -5em 3em yellow;
+        -5em 3em yellow,
+        7em 4em indigo;
 
     background-color: #c8ff00;
     animation-name: box-shadow-vuurwerk;
-    animation-duration: 1s; 
+    animation-duration: 1s;
     animation-iteration-count: infinite;
 
 }
@@ -1068,36 +1133,30 @@ section:nth-of-type(6) article:nth-of-type(2) div {
 
     0%,
     100% {
-       
         box-shadow:
-                2em -10em 0 rgb(36, 20, 255),
-                5em -5em 0 transparent,
-                -5em 3em yellow;
-
-    }
-    
-    40% {
-        box-shadow: 
-        2em -10em 0 rgb(36, 20, 255),
+            2em -10em 0 rgb(20, 243, 255),
             5em -5em 0 transparent,
-        -5em 3em transparent; 
-      
+            -5em 3em yellow,
+            7em 4em transparent;
     }
 
-
+    40% {
+        box-shadow:
+            2em -10em 0 rgb(36, 20, 255),
+            5em -5em 0 transparent,
+            -5em 3em transparent,
+            7em 4em indigo;
+    }
 
     50% {
-      
         box-shadow:
             2em -10em 0 transparent,
             5em -5em 0 purple,
-            -5em 3em salmon;
+            -5em 3em salmon,
+            7em 4em lime;
     }
 
-
-    70% {
-          background-color: transparent;
-    }
+    70% {background-color: transparent;}
 }
 
 @keyframes vuurpijlen {
@@ -1119,11 +1178,7 @@ section:nth-of-type(6) article:nth-of-type(2) div {
         width: 5em;
         transform: scale(1) translateY(0%);
     }
-
-
-
     99% {
-        /* filter: blur(30px); */
         opacity: 1;
         transform: scale(2) translateY(-500%);
     }
@@ -1137,7 +1192,7 @@ section:nth-of-type(6) article:nth-of-type(2) div {
 }
 
 
-
+/* Het picnic tapijt dingens */
 section:nth-of-type(6)>figure {
     position: absolute;
     bottom: -10%;
@@ -1149,13 +1204,11 @@ section:nth-of-type(6)>figure {
 
 /* Het tapijt */
 section:nth-of-type(6) figure figure {
-    /* position: absolute; */
     transform: rotateX(70deg);
-
     block-size: 22em;
     aspect-ratio: 1;
     background-color: #6565d6;
-    /* border-radius: 0 0 2em 2em; */
+   
 
     /* de picnic tapijt */
     background-image:
@@ -1170,24 +1223,253 @@ section:nth-of-type(6) figure figure {
         3em 3em;
 }
 
+/* Naam van de vuurwerk */
+section:nth-of-type(6) article:nth-of-type(3) {
+    perspective: 20em;
+    transform-style: preserve-3d;
+    position: absolute;
+    bottom: 1.5em;
+    right: 10em;
+
+}
+
+section:nth-of-type(6) article:nth-of-type(3)>article {
+    border-radius: 1em;
+    background-color: rgba(255, 255, 255, 0.53);
+    color: black;
+    padding: 2em;
+    transform: rotateX(85deg);
+    transition: all 900ms cubic-bezier(0.860, -0.600, 0.065, 1.415);
+}
+
+section:nth-of-type(6) article:nth-of-type(3)>article:hover {
+    cursor: pointer;
+    transform: rotateX(0deg);
+}
+
 /* Zorgt ervoor dat de animatie stopt met */
 body:has(#play-animation-6:checked) article div {
     animation-play-state: running;
 }
 
 
+
+/*****************************************/
+/* SECTION 7 - VUURWERK ACHTER DE BERGEN */
+/*****************************************/
+
+/* het landschap */
+section:nth-of-type(7) {
+    position: relative;
+    background-image:
+        linear-gradient(180deg,
+            transparent 0 90%,
+            rgb(0, 0, 0) 90%),
+
+        linear-gradient(180deg,
+            #2c82dd,
+            #ff00dd,
+            orange)
+}
+
+/* Eerste berg */
+section:nth-of-type(7) article:nth-of-type(1) {
+
+    bottom: 1em;
+    left: 0;
+    background-color: black;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    height: 10em;
+    width: 20em;
+}
+
+/* Tweede Berg */
+section:nth-of-type(7) article:nth-of-type(2) {
+
+    bottom: 1em;
+    right: 0;
+    background-color: black;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    height: 20em;
+    width: 30em;
+}
+
+/* Alle container van de balletjes*/
+section:nth-of-type(7) article {
+    perspective: 10em;
+    transform-style: preserve-3d;
+    position: absolute;
+}
+
+/* Alle balletjes */
+section:nth-of-type(7) article figure {
+    width: 5em;
+    height: 5em;
+
+    background-color: white;
+    background-image:
+        linear-gradient(45deg,
+            white,
+            salmon);
+    border-radius: 50%;
+
+}
+
+section:nth-of-type(7) article:nth-of-type(3),
+section:nth-of-type(7) article:nth-of-type(4),
+section:nth-of-type(7) article:nth-of-type(5) {
+    perspective: 10em;
+    transform-style: preserve-3d;
+    position: absolute;
+    animation-name: omhoog-gaan;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+
+/* Eerste balletje */
+section:nth-of-type(7) article:nth-of-type(3) {
+    bottom: 1em;
+    left: 15%;
+    z-index: -2;
+
+}
+
+section:nth-of-type(7) article:nth-of-type(3) figure {
+    /* clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%); */
+
+    border-radius: 50%;
+    transform-origin: top center;
+    animation-name: spinnen-1;
+    animation-duration: .5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+}
+
+/* Tweede balletje */
+section:nth-of-type(7) article:nth-of-type(4) figure {
+    clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
+
+    border-radius: 50%;
+    transform-origin: center left;
+    animation-name: spinnen-2;
+    animation-duration: .5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+}
+
+section:nth-of-type(7) article:nth-of-type(4) {
+    animation-delay: 2s;
+    bottom: 1.5em;
+    left: 50%;
+    z-index: -2;
+}
+
+
+
+/* Derde balletje */
+section:nth-of-type(7) article:nth-of-type(5) figure {
+    clip-path: inset(5% 75% 15% 10%);
+    border-radius: 50%;
+    transform-origin: center left;
+    animation-name: spinnen-3;
+    animation-duration: .5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+}
+
+section:nth-of-type(7) article:nth-of-type(5) {
+    animation-delay: 3s;
+    bottom: 3em;
+    right: 6%;
+    z-index: -2;
+}
+
+/* Sterretjes */
+section:nth-of-type(7)>div {
+    position: absolute;
+    z-index: -2;
+    left: 20%;
+    top: 20%;
+    width: .2em;
+    height: .2em;
+    aspect-ratio: 1;
+    background-color: var(--white);
+
+    box-shadow:
+        -2em 5em 0 white,
+         5em 7em 0 white,
+         1em -3em 0 white,
+        19em 6em 0 white,
+         8em 3em 0 white,
+        25em -2em 0 white,
+        5em -2em 0 white,
+        -2em 6em 0 white;
+}
+
+
+@keyframes spinnen-1 {
+    0% {
+        transform: rotateY(0turn);
+    }
+
+
+    100% {
+        transform: rotateY(1turn);
+    }
+}
+
+@keyframes spinnen-2 {
+    0% {
+        transform: rotateX(0turn);
+    }
+
+
+    100% {
+        transform: rotateX(1turn);
+    }
+}
+
+
+@keyframes spinnen-3 {
+    0% {
+        transform: rotateZ(0turn);
+    }
+
+
+    100% {
+        transform: rotateZ(1turn);
+    }
+}
+
+@keyframes omhoog-gaan {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-600%);
+    }
+
+}
+
 @media (max-width: 30em) {
-main {
-    scroll-snap-type:  y mandatory;
-    flex-direction: column;
-}
+    main {
+        scroll-snap-type: y mandatory;
+        flex-direction: column;
+    }
 
-main section {
-    scroll-snap-align: start;
-}
+    main section {
+        scroll-snap-align: start;
+    }
 
-/* De tapijt */
-section:nth-of-type(6) figure figure {
-block-size: 10em;
-}
+    /* De tapijt */
+    section:nth-of-type(6) figure figure {
+        block-size: 10em;
+    }
 }
