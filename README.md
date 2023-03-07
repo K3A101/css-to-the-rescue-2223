@@ -6,10 +6,10 @@ In deze vak had ik de kans gekregen om los te gaan met CSS. Ik ging CSS techniek
 ---
 # Het proces
 
-- [Week 1]()
-- [Week 2]()
-- [Week 3]()
-- [Week 4]()
+- [Week 1](https://github.com/K3A101/css-to-the-rescue-2223#week-1---planning)
+- [Week 2](https://github.com/K3A101/css-to-the-rescue-2223#week-2)
+- [Week 3](https://github.com/K3A101/css-to-the-rescue-2223#week-3)
+- [Week 4](https://github.com/K3A101/css-to-the-rescue-2223#week-4)
 ---
 
 
