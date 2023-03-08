@@ -265,3 +265,8 @@ De onderdelen:
 ![Laatste vakje](./images/vakje-7.png)
 
 [Hier is de code]()
+
+---
+
+## Bronnen
+- 
