@@ -264,9 +264,49 @@ De onderdelen:
 
 ![Laatste vakje](./images/vakje-7.png)
 
-[Hier is de code]()
+[Hier is de code](https://github.com/K3A101/css-to-the-rescue-2223/wiki/Week4#hier-is-de-code-voor-het-maken-van-deze-onderdeel)
+
+---
+# Reflectie
+
+## Wat heb ik allemaal geleerd?
+Ik heb veel geleerd de laatste vier weken. Ik ben van iemad die onzeker was over mijn project naar iemand die zich veel nieuwe CSS technieken kent. Hieronder staan een lijstje van wat ik allemaal had geleerd.
+
+### CSS technieken
+- [x] 3D Animatie met transform
+- [x] 3D Transform 
+- [x] Scroll snap
+- [x] has() selectors
+- [x] Het animeren van gradients
+- [x] Pixel kunstwerken
+- [X] Animeren van box-shadows
+- [x] Motion path
+
+## Wat zou ik anders doen?
+Als ik meer tijd had zou ik iets met `prefer-color-scheme` en `prefer-reduce-motion` doen.
+
+### Licht en donker modus
+Met de prefer-color-scheme zou ik een dark modus en licht modus implemeteren met de has selector. Dus wat je nu ziet zou de darkmode zijn. Maar als iemand licht modus heeft dan krijg die een andere soort ontwerp. Elke slides krijg ook een andere kleur. 
+ 
+### Minder animatie
+Ik zou ook een stijling maken voor mensen die `prefer-rduce-motion` aan hebt. Dus een versie van minder animatie. 
+
+### Echte vuurwerkjes
+Met Echte vuurwerk bedoel ik dat, ervoor zorgen dat die eerst omhoog gaat en dan wanneer die omhoog is in verschillende kleuren spatten. Hier zou ik meer dan zetten naast elkaar. Ik heb een poging gedaan bij de voorlaatste onderdeel, alleen het was niet helemaal wat ik wilde. 
 
 ---
 
 ## Bronnen
-- 
+- Animatable CSS properties - CSS: Cascading Style Sheets | MDN. (2023, 21 februari). https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animated_properties
+- background-clip - CSS: Cascading Style Sheets | MDN. (2023, 21 februari). https://developer.mozilla.org/en-US/docs/Web/CSS/background-clip
+- Coyier, C. (2018, 26 april). Radial Gradient Recipes | CSS-Tricks. CSS-Tricks. https://css-tricks.com/radial-gradient-recipes/
+- Coyier, C. (2021, 26 januari). CSS Gradients | CSS-Tricks. CSS-Tricks. https://css-tricks.com/css3-gradients/
+- cubic-bezier.com. (z.d.). https://cubic-bezier.com/#.17,.67,.83,.67
+- Do you really understand CSS radial-gradients? - Patrick Brosset. (2022, 24 oktober). Patrick Brosset. https://patrickbrosset.com/articles/2022-10-24-do-you-really-understand-CSS-radial-gradients/
+- Get Moving (or not) with CSS Motion Path. (z.d.). https://danielcwilson.com/blog/2020/01/motion-path-quirks/
+- Matuzović, M. (2022, 3 oktober). Day 6: the :has() pseudo-class. Day 6: the :has() pseudo-class. https://www.matuzo.at/blog/2022/100daysof-day6/
+- offset-path - CSS: Cascading Style Sheets | MDN. (2023, 21 februari). https://developer.mozilla.org/en-US/docs/Web/CSS/offset-path
+- S. (z.d.-a). Alles tesaam voor de dames. https://www.sinds1971.nl/cssvoordedames/11-alles-tesaam.html
+- S. (z.d.-b). Animations voor de dames. https://www.sinds1971.nl/cssvoordedames/8-animations.html
+- Using CSS gradients - CSS: Cascading Style Sheets | MDN. (2023a, februari 21). https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients
+- Using CSS gradients - CSS: Cascading Style Sheets | MDN. (2023b, februari 21). https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients
