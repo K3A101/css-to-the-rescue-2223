@@ -100,20 +100,21 @@ ALs feedback heb ik gekregen dat ik meer context kan toevoegen, zodat iemand and
 ## Planning
 - De layout interactiever te maken, door de vakjes te flippen en zie je aan de achterkant een korte beschrijving
 - Motion path animaties toevoegen
-- CSS Gradients toevoege
+- CSS Gradients toevoegen
 - Korte beschrijving onderaan met vuurwerkshow uitleg
 - Ander lettertype zoeken. 
 
 ---
 # Week 3
 
-## Wat heb ik geleerd.
+## Wat heb ik gedaan.
 
 Gedaan:
-- motion-path
+- Geëxperimenteerd met motion path
 - Opstapelende geanimeerde Gradients
 - interactie tovoegen
-
+- Inter lettertype gebruikt voor het project
+- Ervoor zorgen dat de animatie speelt waanneer de checkbox aangevinkt is. 
 
 ### Gradients
 In de volgende vakjes van mijn vuurwerk showcase ging ik meer experimenteren met gradients. Ook heb ik de gradients geanimeerd en verschillende nieuwe dingen geleerd. Eerst heb ik een onderzoek gedaan over gradients in css om de samenstelling  van de properties beter te begrijpen en daarna in de schowcase te implementeren. Verder heb ik ook de workshop over gradients deelgenomen om meer gericht kennis krijgen. 
@@ -193,7 +194,7 @@ section:nth-of-type(5) div figure {
 
 --- 
 # Meer interactie
-VAls laatste heb ik meer interactie toegevoegd in mijn slideshow. Ik heb het zo gedaan dat je met de check box de animatie laten spelen en pauseren. Dit waren allemaal mogelijk met de has selector. 
+Als laatste heb ik meer interactie toegevoegd in mijn slideshow. Ik heb het zo gedaan dat je met de check box de animatie laten spelen en pauseren. Dit waren allemaal mogelijk met de has selector. 
 
 
 --- 
@@ -252,6 +253,7 @@ Dit is de laatste week voor de beeordelingsgesprek. In deze week heb ik  gefocus
 - Een beschrijving per vuurwerkshow
 - Code opschonen
 - Readme Updaten met nieuwe informatie
+- Betere beschrijving geven aan elke slide
 
 ---
 
