@@ -1,6 +1,6 @@
 # Eindopdracht - Interactieve vuurwerkshow
 
-In deze vak had ik de kans gekregen om los te gaan met CSS. Ik ging CSS technieken onderzoeken die ik nooit had gebruikt en daarmee een interactieve vuurwerk showcase maken. De naam zeg het al. Mijn project is een slideshow met verschillende vuurwerkshows waar je kan zelf bedienen. In elke slide is er een CSS techniek die ik had onderzocht en in de show geimplemnteerd. Voor neer gedetailleerde beschrijvingen over mijn project kan u naar me [wiki](https://github.com/K3A101/css-to-the-rescue-2223/wiki) gaan. 
+In deze vak had ik de kans gekregen om los te gaan met CSS. Ik ging CSS technieken onderzoeken die ik nooit had gebruikt en daarmee een interactieve vuurwerk showcase maken. De naam zeg het al. Mijn project is een slideshow met verschillende vuurwerkshows waar je  zelf kan bedienen. In elke slide is er een CSS techniek die ik had onderzocht en in de show geimplemnteerd. Voor meer gedetailleerde beschrijvingen over mijn project kan u naar mijn [wiki](https://github.com/K3A101/css-to-the-rescue-2223/wiki) gaan. 
 
 ![poster van de slideshow](./images/poster-voor-readme.png)
 ---
@@ -47,7 +47,7 @@ CSS technieken zoals:
 - Gradients
 
 
-### Planning voor komende weken
+### Planning voor de eerste week
 - Inspiratie zoeken van andere werken
 - Inspiratie beelden verzamelen
 - Schetsen maken van mogelijke ideeen
@@ -143,7 +143,7 @@ Om de gradients te animeren kan ik de position en de size animeren.
 ---
 
 ### Motion-path
-De volgende trucje voor mijn slideshow was dat ik iets met motion path zou doen. Dit was een uitdaging meaar is wel uiteindelijk gelukt.  Ik heb eerst in illustrator de lijn getekend, en daarna in de code geplaats in een svg eleemnt. Wat ik wilde doen was de ster de path van de lijn volgen. m dat te bereiken heb ik de property `offset-path: path()` gebruikt bij de ster. Om de ster te maken heb ik de de `clip-path: polygoon()` property gebruikt. D path van de lijne heb ik in de offset-path gezet en de ster laten animeren met offset-distance. Van 0% tot 100%. Dus de ster beweegt van 
+De volgende trucje voor mijn slideshow was dat ik iets met motion path zou doen. Dit was een uitdaging maar is wel uiteindelijk gelukt.  Ik heb eerst in illustrator de lijn getekend, en daarna in de code geplaats in een svg element. Wat ik wilde doen was de ster de path van de lijn volgen. Om dat te bereiken heb ik de property `offset-path: path()` gebruikt bij de ster. Om de ster te maken heb ik de de `clip-path: polygoon()` property gebruikt. De path van de lijn heb ik in de offset-path gezet en de ster laten animeren met offset-distance. Van 0% tot 100%. Dus de ster beweegt van 
 
 #### De code 
 ```html
@@ -196,7 +196,7 @@ section:nth-of-type(5) div figure {
 
 --- 
 # Meer interactie
-Als laatste heb ik meer interactie toegevoegd in mijn slideshow. Ik heb het zo gedaan dat je met de check box de animatie laten spelen en pauseren. Dit waren allemaal mogelijk met de has selector. 
+Als laatste heb ik meer interactie toegevoegd in mijn slideshow. Ik heb het zo gedaan dat je met de check box de animatie laten spelen en pauzeren. Dit waren allemaal mogelijk met de has() selector. 
 
 
 --- 
@@ -211,7 +211,7 @@ In de derde voortgang heb ik mijn voortgang besproken. Ik heb nieuwe verandering
 ## Feedback van  voortgang 3
 
 - Uitkijken voor mensen met epilepsie
-- Iets laten gebeuren als het reponsive is
+- Iets laten gebeuren als het reponsive is.
 - De rest van de vakje vullen met experimenten.
 
 ---
@@ -276,7 +276,7 @@ header h1 {
     background-clip: text;
 }
 ```
-De volledige [code]() kun je in me wiki vinden.
+De volledige [code](https://github.com/K3A101/css-to-the-rescue-2223/wiki/week3#geanimeerde-gradient-op-tekst) kun je in me wiki vinden.
 ---
 # Week 4 
 Dit is de laatste week voor de beeordelingsgesprek. In deze week heb ik  gefocust op de details en puntjes op de i.
@@ -305,11 +305,10 @@ De onderdelen:
 
 
 ### Achtergrond van de body verandert met een button
-Voor de hele slideshow, heb ik gebruikt gemaakt van de attribute `:checked` bij checkboxes om iets laten gebeuren. Maar het is me wel gelukt om button te gebruiken in plaats van een checkbox. Voor mij is het nuttig want dan hoef ik geen eventlistener van javascript te gebruiken om iets te laten gebeuren met een knop. 
+Voor de hele slideshow, heb ik gebruikt gemaakt van de attribute `:checked` bij checkboxes om iets te laten gebeuren. Maar het is mij wel gelukt om een knop te gebruiken in plaats van een checkbox. Voor mij is het nuttig want dan hoef ik geen eventlistener van javascript te gebruiken'
+Wat ik heb gedaan met deze button is dat als je erop klikt, dan verandert de achtergrond van de body naar wit en elke slide krijgt een knipperende rand die 5 seconde duurt. Verder de achtergrond van elke onderdeel wordt een lichtere blauwe kleur. 
 
-Wat ik heb gedaan met deze button is dat als je erop klikt, dan verandert de achtergrond van de body naar wit en elke slide krijgt een knipperende rand die 5 seconde duurt. Verder de achtergrond van elke onderdeel wordt een lichtere blauw. 
-
-Om de verandering toe te passen heb ik de de `has()` selector gebruikt. Hieronder kun je de code bekijken hiervoor'
+Om ervoor te zorgen dat dit allemaal gebeur doormiddel van een knop heb ik de de `has()` selector gebruikt. Hieronder kun je de code bekijken.
 
 #### De code
 ```html
@@ -362,10 +361,10 @@ Als ik meer tijd had zou ik iets met `prefer-color-scheme` en `prefer-reduce-mot
 Met de prefer-color-scheme zou ik een dark modus en licht modus implemeteren met de has selector. Dus wat je nu ziet zou de darkmode zijn. Maar als iemand licht modus heeft dan krijg die een andere soort ontwerp. Elke slides krijg ook een andere kleur. 
  
 ### Minder animatie
-Ik zou ook een stijling maken voor mensen die `prefer-rduce-motion` aan hebt. Dus een versie van minder animatie. 
+Ik zou ook een versie maken voor mensen die `prefer-rduce-motion` aan hebt. Dus een versie van minder animatie. 
 
 ### Echte vuurwerkjes
-Met Echte vuurwerk bedoel ik dat, ervoor zorgen dat die eerst omhoog gaat en dan wanneer die omhoog is in verschillende kleuren spatten. Hier zou ik meer dan zetten naast elkaar. Ik heb een poging gedaan bij de voorlaatste onderdeel, alleen het was niet helemaal wat ik wilde. 
+Met Echte vuurwerk bedoel ik dat de vuurwerk eerst omhoog gaat en dan wanneer die omhoog is in verschillende kleuren spatten. Hier zou ik meer dan zetten naast elkaar. Ik heb een poging gedaan bij de voorlaatste onderdeel, alleen het was niet helemaal wat ik wilde. 
 
 ---
 
