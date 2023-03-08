@@ -112,9 +112,10 @@ ALs feedback heb ik gekregen dat ik meer context kan toevoegen, zodat iemand and
 Gedaan:
 - Geëxperimenteerd met motion path
 - Opstapelende geanimeerde Gradients
-- interactie tovoegen
+- interactie toevoegen
 - Inter lettertype gebruikt voor het project
-- Ervoor zorgen dat de animatie speelt waanneer de checkbox aangevinkt is. 
+- Ervoor zorgen dat de animatie speelt waanneer de checkbox aangevinkt is.
+- Geanimeerde gradients bij tekst 
 
 ### Gradients
 In de volgende vakjes van mijn vuurwerk showcase ging ik meer experimenteren met gradients. Ook heb ik de gradients geanimeerd en verschillende nieuwe dingen geleerd. Eerst heb ik een onderzoek gedaan over gradients in css om de samenstelling  van de properties beter te begrijpen en daarna in de schowcase te implementeren. Verder heb ik ook de workshop over gradients deelgenomen om meer gericht kennis krijgen. 
@@ -238,12 +239,43 @@ Ik heb de zesde vakje gevuld met een andere animatie. Het landschap gemaakt met 
 Bij deze link krijg je het uitgebreide code te zien:
 - [Vuurwerk in de park code](https://github.com/K3A101/css-to-the-rescue-2223/wiki/animaties#vuurwerk-in-de-park)
 
----
-## Soort van responsive
+
+### Soort van responsive
 Verder heb ik de showcase responsive gemaakt door de vakjes onder elkaar te zetten bij kleinere scheremen. Het is niet niet helemaal perfect maar alle animaties zijn te zien. Maar mijn focus ligt aan de desktop versie.
 
 <img src="./images/responsive.png">
 
+
+### Geanimeerde gradient op tekst.
+Tot nu heb ik gradients gebruikt bij de achtergrond van een container. Het is ook mogelijk om gradient te plaatsen als achtergrondkleur van tekst. Ik heb hiervoor `background-clip` gebruikt. Met background clip is het mogelijk om complexere achtergronden te creëren als tekst kleur. Zoals bijvoorbeeld een background-image, patronenen, bewegende kleuren etc. Voor  mijn eigen werk heb ik geanimeerde kleurverloop geplaatst die zich activeert wanneer de gebruiker op de tekst met zijn muis hovert. Hieronder laat ik de code zien die ik heb gebruikt.
+
+```html
+      <h1>Interactive digital firework showcase </h1>
+```
+```css
+header h1 {
+       background-image: linear-gradient(45deg,
+            crimson,
+            darkorange,
+            gold,
+            limegreen,
+            dodgerblue,
+            blueviolet,
+            crimson,
+            darkorange,
+            gold,
+            limegreen,
+            dodgerblue,
+            blueviolet,
+            crimson);
+
+    /* De background ga naaŕde text */
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+```
+De volledige [code]() kun je in me wiki vinden.
 ---
 # Week 4 
 Dit is de laatste week voor de beeordelingsgesprek. In deze week heb ik  gefocust op de details en puntjes op de i.
@@ -251,7 +283,7 @@ Dit is de laatste week voor de beeordelingsgesprek. In deze week heb ik  gefocus
 ## Wat ik heb gedaan
 - De laatste vakje gevuld met animatie
 - Een beschrijving per vuurwerkshow
-- Code opschonen
+- Code opschonen en commentaar bijzetten
 - Readme Updaten met nieuwe informatie
 - Betere beschrijving geven aan elke slide
 
@@ -262,7 +294,7 @@ De laatste vuurwerkshow is een combinatie van alle CSS technieken die ik de laat
 
 De onderdelen:
 - De landschap die bestaat uit twee linear gradients, een voor de lucht en de andere voor de grond.
-- De bergen,  zijn driekhoeken gevormd door  clip-paths
+- De bergen,  zijn driehoeken gevormd door  clip-paths
 - De sterrebn gemaakt met kleine witte box-shadows
 - De vuurwerk zelf zijn de 3D transform animatie
 
