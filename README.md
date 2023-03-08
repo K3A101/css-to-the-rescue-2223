@@ -36,6 +36,7 @@ De CSS technieken die ik ga gebruiken zijn:
 Hier heb ik een aantal ideeen voor mijn opdracht geschets.
 Ik heb technieken van css toegevoegd die ik kan implementeren in mijn project.
 
+### CSS technieken in mijn schets
 CSS technieken zoals:
 - Scroll-snap
 - prefer color scheme
@@ -46,7 +47,7 @@ CSS technieken zoals:
 - Gradients
 
 
-### Planning
+### Planning voor komende weken
 - Inspiratie zoeken van andere werken
 - Inspiratie beelden verzamelen
 - Schetsen maken van mogelijke ideeen
@@ -289,7 +290,7 @@ Dit is de laatste week voor de beeordelingsgesprek. In deze week heb ik  gefocus
 
 ---
 
-### Laatste show: Vuurwerk achter de berg
+### Laatste show: Vuurwerk achter de bergen
 De laatste vuurwerkshow is een combinatie van alle CSS technieken die ik de laatste vier weken had geleerd. Ik hebe gebruikt gemaakt van gradients, 3D transforms en box-shadows. Wat je ziet is vuurwerkshow die plaatsneem achter de bergen. 
 
 De onderdelen:
