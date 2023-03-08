@@ -3,7 +3,6 @@
     margin: 0;
     box-sizing: border-box;
 }
-
 :root {
 
     --dark-blue: #0D0847;
@@ -11,6 +10,7 @@
     --black: rgb(16, 14, 44);
     --algemene-font: 'inter', sans-serif;
 }
+
 
 
 
@@ -105,6 +105,44 @@ header h1:hover {
         background-position: right bottom;
     }
 }
+/* Button die verander de modus */
+/* Verbergt de checkbox */
+header input {
+  display: none;
+}
+
+header label {
+    background-color: salmon;
+    color: var(--dark-blue);
+    position: absolute;
+    right: 5em;
+    padding: 1em ;
+    border-radius: 1em; 
+    transition: 1s;
+}
+
+header label:hover{
+    cursor: pointer;
+    background-color: lightsalmon;
+}
+
+:has(#change-modus:checked) body {
+   background-color: white;
+    color-scheme: light;
+}
+
+:has(#change-modus:checked) section {
+background-color: #2a2c8b;
+box-shadow: 0em 0em .5em .2em salmon;
+animation: knipperend 1s 5;
+}
+
+@keyframes knipperend {
+    0%{box-shadow: 0em 0em .5em .2em salmon;}
+    25%{box-shadow: 0em 0em .5em .2em crimson;}
+    50%{box-shadow: 0em 0em .5em .2em deeppink;}
+    75%{box-shadow: 0em 0em .5em .2em magenta;}
+}
 
 /* Alle vakjes */
 section {
@@ -112,11 +150,9 @@ section {
     place-content: center;
     background-color: var(--dark-blue);
     border-radius: 2em;
-    /* height: 30rem; */
     scroll-snap-align: center;
     block-size: 80vmin;
     aspect-ratio: 1;
-    /* background-color: var(--white); */
     filter: drop-shadow(.2em .2em .2em rgba(0, 0, 0, 0.374));
     position: relative;
 }
